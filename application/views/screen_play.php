@@ -87,7 +87,7 @@
 
           <!-- /.nav-tabs-custom -->
 
-          <div class="box box-solid bg-light-blue-gradient">
+          <div class="box box-solid bg-light-blue-gradient" style="height:200px">
             this is banner section
           </div>
 
@@ -186,24 +186,23 @@ h6. Bootstrap heading
 
     </section>
     <!-- /.content -->
+    <div class="row">
           <section class="col-lg-12 connectedSortable">
             <div class="box">
-            <div class="box-body">
+
               <marquee behavior="scroll" height="80">
               <h2>Message box testing JPS Kuala Muda Kedah</h2>
-</marquee>
-            </div>
+            </marquee>
+
           </div>
+        </div>
+        <footer class="main-footer" style="margin-left:0px;height:100px;">
+            get time
+        </footer>
 
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer" style="margin-left:0px;height:100px;">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
+
 
 </div>
 <!-- ./wrapper -->
