@@ -122,7 +122,7 @@
                                   <img src="<?php echo base_url();?>/assets/images/slide-1.jpg" alt="Los Angeles" width="1100" height="500">
                                 </div>
                                 <div class="carousel-item">
-                                  <img src="<?php echo base_url();?>/assets/images/slide-2.jpg" alt="Chicago" width="1100" height="500">
+                                  <img src="<?php echo base_url();?>/assets/images/slide-1.jpg" alt="Chicago" width="1100" height="500">
                                 </div>
                                 <div class="carousel-item">
                                   <img src="<?php echo base_url();?>/assets/images/slide-3.jpg" alt="New York" width="1100" height="500">

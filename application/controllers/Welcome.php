@@ -20,6 +20,72 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('admin');
+		$this->load->view('template/footer');
+	}
+
+	public function screen()
+	{
+		
 		$this->load->view('screen_play');
+		
+	}
+
+	public function banner()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('banner');
+		$this->load->view('template/footer');
+	}
+
+	public function video()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('video');
+		$this->load->view('template/footer');
+	}
+
+	public function photo()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('photo');
+		$this->load->view('template/footer');
+	}
+
+	public function notice()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('notice');
+		$this->load->view('template/footer');
+	}
+
+	public function message()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('message');
+		$this->load->view('template/footer');
+	}
+
+	public function date()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('date');
+		$this->load->view('template/footer');
+	}
+
+	public function settings()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('settings');
+		$this->load->view('template/footer');
 	}
 }
