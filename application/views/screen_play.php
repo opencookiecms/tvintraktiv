@@ -57,7 +57,7 @@
 
     <nav class="navbar navbar-static-top" style="margin-left:0px">
       <marquee behavior="scroll">
-      <h1>Selamat data ke Jabatan Pengairan dan Saliran Negeri Kedah Darul Aman</h1>
+      <h1>Selamat datang ke Jabatan Pengairan dan Saliran Negeri Kedah Darul Aman</h1>
       </marquee
 
     </nav>
@@ -87,8 +87,25 @@
 
           <!-- /.nav-tabs-custom -->
 
-          <div class="box box-solid bg-light-blue-gradient" style="height:200px">
-            this is banner section
+          <div class="box box-solid bg-light-blue-gradient" style="height:600px">
+            <?php 
+               $i = 1; 
+
+               foreach ($get_banner as $row) {
+                 # code.. 
+
+                 ?> 
+
+                 <tr>
+                  <td><?php echo $row->banner_title?></td>
+                  <br>
+                  <td><?php echo $row->banner_content?></td>
+                  <br>
+                  <td><h3>NEW MESSAGE</h3></td>
+                </tr>
+
+
+                <?php } ?>
           </div>
 
 

@@ -36,7 +36,8 @@ class Welcome extends CI_Controller {
 	public function screen()
 	{
 		
-		$this->load->view('screen_play');
+		$data['get_banner']=$this->Welcome_model->get_bannerview();
+		$this->load->view('screen_play', $data);
 		
 	}
 
@@ -49,8 +50,9 @@ class Welcome extends CI_Controller {
 		if($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('template/header');
-			$this->load->view('template/sidebar', $data);
-			$this->load->view('banner');
+			$this->load->view('template/sidebar');
+			$data['get_banner']=$this->Welcome_model->get_bannerview();
+			$this->load->view('banner', $data);
 			$this->load->view('template/footer');
 		}
 		else
