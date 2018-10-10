@@ -22,6 +22,7 @@
       <li class="header">MAIN NAVIGATION</li>
 
       <li><a href="<?php echo base_url('welcome/settings') ?>"><i class="fa fa-book"></i> <span>Settings</span></a></li>
+      <li><a href="<?php echo base_url() ?>"><i class="fa fa-book"></i> <span>Menu</span></a></li>
     </ul>
   </section>
   <!-- /.sidebar -->
