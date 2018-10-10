@@ -52,6 +52,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  		return $this->db->insert('data_playback', $data);
  	}
 
+ 	public function create_slide()
+ 	{
+ 		$this->load->helper('url');
+
+ 		$slide_title = $this->input->post('title');
+ 		$slide_content = $this->input->post('content');
+ 		$slide_status = $this->input->post('status');
+ 		$slide_reg = $this->input->post('register');
+
+ 		$data = array(
+ 			'slide_title' => $slide_title,
+ 			'slide_content' => $slide_content,
+ 			'slide_status' => $slide_status,
+ 			'slide_reg' => $slide_reg
+ 			);
+
+ 		return $this->db->insert('data_slide', $data);
+ 	}
+
+ 	public function create_notice()
+ 	{
+ 		$this->load->helper('url');
+
+ 		$notice_title = $this->input->post('title');
+ 		$notice_content = $this->input->post('content');
+ 		$notice_status = $this->input->post('status');
+ 		$notice_reg = $this->input->post('register');
+
+ 		$data = array(
+ 			'notice_title' => $notice_title,
+ 			'notice_content' => $notice_content,
+ 			'notice_status' => $notice_status,
+ 			'notice_reg' => $notice_reg
+ 			);
+
+ 		return $this->db->insert('data_notice', $data);
+ 	}
+
+
  	public function getLastid()
  	{
  		$lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('data_banner')->row('id');
@@ -68,6 +107,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	public function get_playbackview()
 	{
 		$query = $this->db->get('data_playback');
+		return $query->result();
+	}
+
+	public function get_slideview()
+	{
+		$query = $this->db->get('data_slide');
+		return $query->result();
+	}
+
+	public function get_noticeview()
+	{
+		$query = $this->db->get('data_notice');
 		return $query->result();
 	}
 

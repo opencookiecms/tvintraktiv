@@ -90,18 +90,52 @@ class Welcome extends CI_Controller {
 
 	public function photo()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('photo');
-		$this->load->view('template/footer');
+		$data['title'] = 'Add New Slide';
+
+		$this->form_validation->set_rules('title', 'Title', 'required');
+
+		if($this->form_validation->run() == FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$data['get_slide']=$this->Welcome_model->get_slideview();
+			$this->load->view('photo', $data);
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Welcome_model->create_slide();
+			$lastId=$this->Welcome_model->getLastId();
+			redirect(base_url('welcome/photo'));
+		}
+
+		
 	}
 
 	public function notice()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('notice');
-		$this->load->view('template/footer');
+		$data['title'] = 'Add New Notice';
+
+		$this->form_validation->set_rules('title', 'Title', 'required');
+
+		if($this->form_validation->run() == FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$data['get_notice']=$this->Welcome_model->get_noticeview();
+			$this->load->view('notice', $data);
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Welcome_model->create_notice();
+			$lastId=$this->Welcome_model->getLastId();
+			redirect(base_url('welcome/notice'));
+		}
+
+		
 	}
 
 	public function message()
