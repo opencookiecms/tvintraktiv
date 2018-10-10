@@ -18,6 +18,13 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+		parent::__construct();
+
+		$this->load->model('Welcome_model');
+
+	}
+
 	public function index()
 	{
 		$this->load->view('template/header');
@@ -35,10 +42,25 @@ class Welcome extends CI_Controller {
 
 	public function banner()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('banner');
-		$this->load->view('template/footer');
+		$data['title'] = 'Add New Banner';
+
+		$this->form_validation->set_rules('title', 'Title', 'required');
+
+		if($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar', $data);
+			$this->load->view('banner');
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Welcome_model->create_banner();
+			$lastId=$this->Welcome_model->getLastId();
+			redirect(base_url('welcome/banner'));
+		}
+
+		
 	}
 
 	public function video()
