@@ -57,6 +57,7 @@
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Register:</label>
                     <input class="form-control" type="timestamp" id="register" name="register">
+                    <label>Format : 0000-00-00 00:00:00</label>
                   </div>
 
                   <button type="edit" name="edit" class="btn btn-default">Cancel</button>
