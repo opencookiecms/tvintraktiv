@@ -33,6 +33,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  		return $this->db->insert('data_banner', $data);
  	}
 
+ 	public function create_video()
+ 	{
+ 		$this->load->helper('url');
+
+ 		$playback_title = $this->input->post('title');
+ 		$playback_content = $this->input->post('content');
+ 		$playback_status = $this->input->post('status');
+ 		$playback_reg = $this->input->post('register');
+
+ 		$data = array(
+ 			'playback_title' => $playback_title,
+ 			'playback_content' => $playback_content,
+ 			'playback_status' => $playback_status,
+ 			'playback_reg' => $playback_reg
+ 			);
+
+ 		return $this->db->insert('data_playback', $data);
+ 	}
+
  	public function getLastid()
  	{
  		$lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('data_banner')->row('id');
@@ -43,6 +62,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	public function get_bannerview()
 	{
 		$query = $this->db->get('data_banner');
+		return $query->result();
+	}
+
+	public function get_playbackview()
+	{
+		$query = $this->db->get('data_playback');
 		return $query->result();
 	}
 

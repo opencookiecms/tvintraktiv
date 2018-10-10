@@ -67,10 +67,25 @@ class Welcome extends CI_Controller {
 
 	public function video()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('video');
-		$this->load->view('template/footer');
+		$data['title'] = 'Add New Playback';
+
+		$this->form_validation->set_rules('title', 'Title', 'required');
+
+		if($this->form_validation->run() == FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$data['get_playback']=$this->Welcome_model->get_playbackview();
+			$this->load->view('video', $data);
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Welcome_model->create_video();
+			$lastId=$this->Welcome_model->getLastId();
+			redirect(base_url('welcome/video'));
+		}
 	}
 
 	public function photo()
