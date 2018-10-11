@@ -37,6 +37,7 @@ class Welcome extends CI_Controller {
 	{
 		
 		$data['get_banner']=$this->Welcome_model->get_bannerview();
+		$data['get_message']=$this->Welcome_model->get_messageview();
 		$this->load->view('screen_play', $data);
 		
 	}
@@ -140,10 +141,26 @@ class Welcome extends CI_Controller {
 
 	public function message()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('message');
-		$this->load->view('template/footer');
+		$data['title'] = 'Add New Message';
+
+		$this->form_validation->set_rules('title', 'Title', 'required');
+
+		if($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$data['get_message']=$this->Welcome_model->get_messageview();
+			$this->load->view('message', $data);
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Welcome_model->create_message();
+			$lastId=$this->Welcome_model->getLastId();
+			redirect(base_url('welcome/message'));
+		}
+
+		
 	}
 
 	public function date()

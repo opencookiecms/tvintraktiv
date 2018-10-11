@@ -90,6 +90,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  		return $this->db->insert('data_notice', $data);
  	}
 
+ 	public function create_message()
+ 	{
+ 		$this->load->helper('url');
+
+ 		$message_title = $this->input->post('title');
+ 		$message_content = $this->input->post('content');
+ 		$message_status = $this->input->post('status');
+ 		$message_reg = $this->input->post('register');
+
+ 		$data = array(
+ 			'message_title' => $message_title,
+ 			'message_content' => $message_content,
+ 			'message_status' => $message_status,
+ 			'message_reg' => $message_reg
+ 			);
+
+ 		return $this->db->insert('data_message', $data);
+ 	}
+
 
  	public function getLastid()
  	{
@@ -119,6 +138,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	public function get_noticeview()
 	{
 		$query = $this->db->get('data_notice');
+		return $query->result();
+	}
+
+	public function get_messageview()
+	{
+		$query = $this->db->get('data_message');
 		return $query->result();
 	}
 

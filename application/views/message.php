@@ -22,31 +22,42 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-body">
-              <h3>Add New Message</h3>
-              <br>
-                <form>
+              
+              <?php if (isset($_SESSION['success'])) { ?>
+              <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
+              <?php
+            } ?>
+            <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+            <!--<form  method="POST" action="?php echo site_url('Projek/insert_stepone') ?>">-->
+
+            <h2><?php echo $title; ?></h2>
+
+            <?php echo validation_errors(); ?>
+
+            <?php echo form_open('welcome/message'); ?>
                   <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Title:</label>
-                    <input type="text" class="form-control" id="recipient-name">
+                    <input type="text" class="form-control" id="title" name="title">
                   </div>
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Content:</label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea class="form-control" id="content" name="content"></textarea>
                   </div>
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Status:</label>
-                    <select type="text" class="form-control" id="jenissebut" name="jenissebut">
+                    <select type="text" class="form-control" id="status" name="status">
                       <option value=""></option>
-                      <option value="Lantikan Terus">Show</option>
-                      <option value="Sebutharga">Not Show</option>
+                      <option value="Show">Show</option>
+                      <option value="Not Show">Not Show</option>
                     </select>
                   </div>
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Register:</label>
-                    <input class="form-control" id="message-text">
+                    <input class="form-control" type="timestamp" id="register" name="register">
+                    <label>Format : 0000-00-00 00:00:00</label>
                   </div>
 
                   <button type="edit" name="edit" class="btn btn-default">Cancel</button>
@@ -59,7 +70,7 @@
 
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">List of Banner</h3>
+            <h3 class="box-title">List of Message</h3>
           </div>
           <!-- /.box-header -->
           
@@ -80,16 +91,17 @@
                <?php 
                $i = 1; 
 
-               {  
+               foreach ($get_message as $row) {
+                 # code.. 
 
                  ?> 
 
                  <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td><?php echo $row->id?></td>
+                  <td><?php echo $row->message_title?></td>
+                  <td><?php echo $row->message_content?></td>
+                  <td><?php echo $row->message_status?></td>
+                  <td><?php echo $row->message_reg?></td>
                   <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
                     <button type="delete" name="delete" class="btn btn-default">Delete</button>
                   </td>

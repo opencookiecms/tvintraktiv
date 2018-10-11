@@ -170,9 +170,7 @@
                 <div class="box-body">
                   <span class="loremss">
                     <marquee behavior="scroll"direction="up" height="400">
-                      <h2>What is Lorem Ipsum?
-                        Lorem Ipsum is simplyhen an unknown printer took  m is simm is simplyhen an unknown printer tom is simplyhen an unknown printer tolyhen am is simplyhen an unknown printer ton unknown printer toa galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-
+                      <h2>BERITA SEGENAP DIMENSI
                         <P>
 
                           <P>
@@ -180,19 +178,20 @@
                             <P>
 
                               <P>
+                              <br>
                                <?php 
                                $i = 1; 
 
-                               foreach ($get_banner as $row) {
+                               foreach ($get_message as $row) {
                  # code.. 
 
                                  ?> 
 
                                  <tr>
                                  <td><h4>NEW MESSAGE</h4></td>
-                                  <td><?php echo $row->banner_title?></td>
+                                  <td><?php echo $row->message_title?></td>
                                   <br>
-                                  <td><?php echo $row->banner_content?></td>
+                                  <td><?php echo $row->message_content?></td>
                                   <br>
 
                                 </tr>
