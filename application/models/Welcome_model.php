@@ -147,7 +147,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	public function get_messageview()
 	{
-		$query = $this->db->get('data_message');
+    $this->db->select('*');
+    $this->db->from('data_message');
+
+		$query = $this->db->get();
 		return $query->result();
 	}
 

@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/owncss/style.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,7 +88,7 @@
 
               <!-- /.nav-tabs-custom -->
 
-              <div class="box box-solid bg-light-blue-gradient" style="height:600px">
+              <div class="box box-solid bg-light-blue-gradient" style="height:200px">
                 <center>
                   <?php
                   $i = 1;
@@ -169,7 +170,7 @@
               <div class="box" style="padding:0px;">
                 <div class="box-body">
                   <span class="loremss">
-                    <marquee behavior="scroll"direction="up" height="400">
+                    <marquee behavior="scroll"direction="up" height="350">
                     <?php echo $get_notice[0]->notice_content ?>
 
                             </marquee>
@@ -194,8 +195,16 @@
                   <section class="col-lg-12 connectedSortable">
                     <div class="box">
 
-                      <marquee behavior="scroll" height="80">
-                        <h2>Message box testing JPS Kuala Muda Kedah</h2>
+                      <marquee behavior="scroll" height="80" class="marquee">
+                        <?php
+                        $pre     = "<span class='spantest'>";
+                        $append  = "</span>";
+
+                            foreach ($get_message as $message_get) {
+                            echo $pre.$message_get->message_content.$append;
+
+                            }
+                        ?>
                       </marquee>
 
                     </div>
