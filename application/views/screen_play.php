@@ -89,13 +89,13 @@
 
               <div class="box box-solid bg-light-blue-gradient" style="height:600px">
                 <center>
-                  <?php 
-                  $i = 1; 
+                  <?php
+                  $i = 1;
 
                   foreach ($get_banner as $row) {
-                 # code.. 
+                 # code..
 
-                   ?> 
+                   ?>
 
                    <tr>
                     <td><h3>NEW MESSAGE</h3></td>
@@ -170,36 +170,8 @@
                 <div class="box-body">
                   <span class="loremss">
                     <marquee behavior="scroll"direction="up" height="400">
-                      <h2>BERITA SEGENAP DIMENSI
-                        <P>
+                    <?php echo $get_notice[0]->notice_content ?>
 
-                          <P>
-
-                            <P>
-
-                              <P>
-                              <br>
-                               <?php 
-                               $i = 1; 
-
-                               foreach ($get_message as $row) {
-                 # code.. 
-
-                                 ?> 
-
-                                 <tr>
-                                 <td><h4>NEW MESSAGE</h4></td>
-                                  <td><?php echo $row->message_title?></td>
-                                  <br>
-                                  <td><?php echo $row->message_content?></td>
-                                  <br>
-
-                                </tr>
-
-
-                                <?php } ?>
-
-                              </h2>
                             </marquee>
                           </span>
                         </div>

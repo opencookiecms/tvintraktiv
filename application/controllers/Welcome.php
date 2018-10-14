@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function __construct() {
 		parent::__construct();
-
+		  $this->load->helper('url');
 		$this->load->model('Welcome_model');
 
 	}
@@ -35,11 +35,14 @@ class Welcome extends CI_Controller {
 
 	public function screen()
 	{
-		
-		$data['get_banner']=$this->Welcome_model->get_bannerview();
-		$data['get_message']=$this->Welcome_model->get_messageview();
-		$this->load->view('screen_play', $data);
-		
+
+		///load the data to show on screen/////
+		$this->load->database();
+ 		$data['get_banner']=$this->Welcome_model->get_bannerview();
+ 		$data['get_message']=$this->Welcome_model->get_messageview();
+ 		$data['get_notice']= $this->Welcome_model->get_noticeview();
+ 		$this->load->view('screen_play', $data);
+
 	}
 
 	public function banner()
@@ -63,7 +66,7 @@ class Welcome extends CI_Controller {
 			redirect(base_url('welcome/banner'));
 		}
 
-		
+
 	}
 
 	public function video()
@@ -111,7 +114,7 @@ class Welcome extends CI_Controller {
 			redirect(base_url('welcome/photo'));
 		}
 
-		
+
 	}
 
 	public function notice()
@@ -136,7 +139,7 @@ class Welcome extends CI_Controller {
 			redirect(base_url('welcome/notice'));
 		}
 
-		
+
 	}
 
 	public function message()
@@ -160,7 +163,7 @@ class Welcome extends CI_Controller {
 			redirect(base_url('welcome/message'));
 		}
 
-		
+
 	}
 
 	public function date()

@@ -22,7 +22,7 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-body">
-              
+
               <?php if (isset($_SESSION['success'])) { ?>
               <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
               <?php
@@ -42,7 +42,10 @@
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Content:</label>
-                    <textarea class="form-control" id="content" name="content"></textarea>
+                    <textarea class="ckeditor" name="content"></textarea>
+                    <script>
+                    CKEDITOR.replace( 'content' );
+                    </script>
                   </div>
 
                   <div class="form-group">
@@ -73,7 +76,7 @@
             <h3 class="box-title">List of Notice Board</h3>
           </div>
           <!-- /.box-header -->
-          
+
           <div class="box-body">
             <table id="example1" class="table table-bordered table-striped">
               <thead>
@@ -88,13 +91,13 @@
               </thead>
 
               <tbody>
-               <?php 
-               $i = 1; 
+               <?php
+               $i = 1;
 
                foreach ($get_notice as $row) {
-                 # code.. 
+                 # code..
 
-                 ?> 
+                 ?>
 
                  <tr>
                   <td><?php echo $row->id?></td>
@@ -132,4 +135,3 @@
 </div>
 </div>
 <!-- /.content-wrapper -->
-

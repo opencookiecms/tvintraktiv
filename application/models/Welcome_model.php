@@ -1,12 +1,12 @@
-<?php 
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * 
+ *
  */
  class Welcome_model extends CI_Model
  {
- 	
+
  	public function __construct()
  	{
  		# code...
@@ -71,6 +71,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  		return $this->db->insert('data_slide', $data);
  	}
 
+
+///Saving the data///////
  	public function create_notice()
  	{
  		$this->load->helper('url');
@@ -110,13 +112,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	}
 
 
- 	public function getLastid()
- 	{
- 		$lastId = $this->db->select('id')->order_by('id','desc')->limit(1)->get('data_banner')->row('id');
 
-    return $lastId; //return last id
-	}
-
+ ///this is get function to display on screen......///////////
 	public function get_bannerview()
 	{
 		$query = $this->db->get('data_banner');
@@ -137,8 +134,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	public function get_noticeview()
 	{
-		$query = $this->db->get('data_notice');
+
+
+    $this->db->select('*');
+    $this->db->from('data_notice');
+
+		$query = $this->db->get();
 		return $query->result();
+
+
 	}
 
 	public function get_messageview()
@@ -148,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 
 
- } 
+ }
 
 
 
