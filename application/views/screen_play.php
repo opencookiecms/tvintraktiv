@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/owncss/style.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/owncss/style.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,7 +49,7 @@
      width: 100%;
      height: 350px;
    }
- </style>
+  </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
@@ -59,7 +59,7 @@
       <nav class="navbar navbar-static-top" style="margin-left:0px">
         <marquee behavior="scroll">
           <h1>Selamat datang ke Jabatan Pengairan dan Saliran Negeri Kedah Darul Aman</h1>
-          </marquee
+        </marquee
 
         </nav>
       </header>
@@ -99,6 +99,7 @@
                    ?>
 
                    <tr>
+                   <br>
                     <td><h3>NEW MESSAGE</h3></td>
                     <td><?php echo $row->banner_title?></td>
                     <br>
@@ -132,21 +133,21 @@
 
                     <!-- Indicators -->
                     <ul class="carousel-indicators">
-                      <li data-target="#demo" data-slide-to="0" class="active"></li>
-                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="1" class="active"></li>
                       <li data-target="#demo" data-slide-to="2"></li>
+                      <li data-target="#demo" data-slide-to="3"></li>
                     </ul>
 
                     <!-- The slideshow -->
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="<?php echo base_url();?>/assets/images/slide-1.jpg" alt="Los Angeles" width="1100" height="500">
+                        <img src="<?php echo base_url('/assets/images/slide-1.jpg');?>" alt="Los Angeles" width="1100" height="500">
                       </div>
                       <div class="carousel-item">
-                        <img src="<?php echo base_url();?>/assets/images/slide-1.jpg" alt="Chicago" width="1100" height="500">
+                        <img src="<?php echo base_url('/assets/images/slide-2.jpg');?>" alt="Chicago" width="1100" height="500">
                       </div>
                       <div class="carousel-item">
-                        <img src="<?php echo base_url();?>/assets/images/slide-3.jpg" alt="New York" width="1100" height="500">
+                        <img src="<?php echo base_url('/assets/images/slide-3.jpg');?>" alt="New York" width="1100" height="500">
                       </div>
                     </div>
 
@@ -170,95 +171,95 @@
               <div class="box" style="padding:0px;">
                 <div class="box-body">
                   <span class="loremss">
-                    <marquee behavior="scroll"direction="up" height="350">
-                    <?php echo $get_notice[0]->notice_content ?>
+                    <marquee behavior="scroll" direction="up" height="350">
+                      <?php echo $get_notice[0]->notice_content ?>
 
-                            </marquee>
-                          </span>
-                        </div>
-                      </div>
-
-
-
-
-
-
-
-                    </section>
-                    <!-- right col -->
-                  </div>
-                  <!-- /.row (main row) -->
-
-                </section>
-                <!-- /.content -->
-                <div class="row">
-                  <section class="col-lg-12 connectedSortable">
-                    <div class="box">
-
-                      <marquee behavior="scroll" height="80" class="marquee">
-                        <?php
-                        $pre     = "<span class='spantest'>";
-                        $append  = "</span>";
-
-                            foreach ($get_message as $message_get) {
-                            echo $pre.$message_get->message_content.$append;
-
-                            }
-                        ?>
-                      </marquee>
-
-                    </div>
-                  </div>
-                  <footer class="main-footer" style="margin-left:0px;height:100px;">
-                    get time
-                  </footer>
-
+                    </marquee>
+                  </span>
                 </div>
-                <!-- /.content-wrapper -->
-
-
               </div>
-              <!-- ./wrapper -->
 
-              <!-- jQuery 3 -->
-              <script src="<?php echo base_url();?>assets/bower_components/jquery/dist/jquery.min.js"></script>
-              <!-- jQuery UI 1.11.4 -->
-              <script src="<?php echo base_url();?>assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
-              <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-              <script>
-                $.widget.bridge('uibutton', $.ui.button);
-              </script>
-              <!-- Bootstrap 3.3.7 -->
-              <script src="<?php echo base_url();?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-              <!-- Morris.js charts -->
-              <script src="<?php echo base_url();?>assets/bower_components/raphael/raphael.min.js"></script>
-              <script src="<?php echo base_url();?>assets/bower_components/morris.js/morris.min.js"></script>
-              <!-- Sparkline -->
-              <script src="<?php echo base_url();?>assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-              <!-- jvectormap -->
-              <script src="<?php echo base_url();?>assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-              <script src="<?php echo base_url();?>assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-              <!-- jQuery Knob Chart -->
-              <script src="<?php echo base_url();?>assets/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-              <!-- daterangepicker -->
-              <script src="<?php echo base_url();?>assets/bower_components/moment/min/moment.min.js"></script>
-              <script src="<?php echo base_url();?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-              <!-- datepicker -->
-              <script src="<?php echo base_url();?>assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-              <!-- Bootstrap WYSIHTML5 -->
-              <script src="<?php echo base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-              <!-- Slimscroll -->
-              <script src="<?php echo base_url();?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-              <!-- FastClick -->
-              <script src="<?php echo base_url();?>assets/bower_components/fastclick/lib/fastclick.js"></script>
-              <!-- AdminLTE App -->
-              <script src="<?php echo base_url();?>assets/dist/js/adminlte.min.js"></script>
-              <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-              <script src="<?php echo base_url();?>assets/dist/js/pages/dashboard.js"></script>
-              <!-- AdminLTE for demo purposes -->
-              <script src="<?php echo base_url();?>assets/dist/js/demo.js"></script>
 
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-            </body>
-            </html>
+
+
+
+
+
+            </section>
+            <!-- right col -->
+          </div>
+          <!-- /.row (main row) -->
+
+        </section>
+        <!-- /.content -->
+        <div class="row">
+          <section class="col-lg-12 connectedSortable">
+            <div class="box">
+
+              <marquee behavior="scroll" height="80" class="marquee">
+                <?php
+                $pre     = "<span class='spantest'>";
+                $append  = "</span>";
+
+                foreach ($get_message as $message_get) {
+                  echo $pre.$message_get->message_content.$append;
+
+                }
+                ?>
+              </marquee>
+
+            </div>
+          </div>
+          <footer class="main-footer" style="margin-left:0px;height:100px;">
+            get time
+          </footer>
+
+        </div>
+        <!-- /.content-wrapper -->
+
+
+      </div>
+      <!-- ./wrapper -->
+
+      <!-- jQuery 3 -->
+      <script src="<?php echo base_url();?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+      <!-- jQuery UI 1.11.4 -->
+      <script src="<?php echo base_url();?>assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+      <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+      <script>
+        $.widget.bridge('uibutton', $.ui.button);
+      </script>
+      <!-- Bootstrap 3.3.7 -->
+      <script src="<?php echo base_url();?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- Morris.js charts -->
+      <script src="<?php echo base_url();?>assets/bower_components/raphael/raphael.min.js"></script>
+      <script src="<?php echo base_url();?>assets/bower_components/morris.js/morris.min.js"></script>
+      <!-- Sparkline -->
+      <script src="<?php echo base_url();?>assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+      <!-- jvectormap -->
+      <script src="<?php echo base_url();?>assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+      <script src="<?php echo base_url();?>assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+      <!-- jQuery Knob Chart -->
+      <script src="<?php echo base_url();?>assets/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+      <!-- daterangepicker -->
+      <script src="<?php echo base_url();?>assets/bower_components/moment/min/moment.min.js"></script>
+      <script src="<?php echo base_url();?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+      <!-- datepicker -->
+      <script src="<?php echo base_url();?>assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+      <!-- Bootstrap WYSIHTML5 -->
+      <script src="<?php echo base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+      <!-- Slimscroll -->
+      <script src="<?php echo base_url();?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+      <!-- FastClick -->
+      <script src="<?php echo base_url();?>assets/bower_components/fastclick/lib/fastclick.js"></script>
+      <!-- AdminLTE App -->
+      <script src="<?php echo base_url();?>assets/dist/js/adminlte.min.js"></script>
+      <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+      <script src="<?php echo base_url();?>assets/dist/js/pages/dashboard.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="<?php echo base_url();?>assets/dist/js/demo.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </body>
+    </html>

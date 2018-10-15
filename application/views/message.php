@@ -103,7 +103,7 @@
                   <td><?php echo $row->message_status?></td>
                   <td><?php echo $row->message_reg?></td>
                   <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
-                    <button type="delete" name="delete" class="btn btn-default">Delete</button>
+                    <a href="<?php echo base_url('welcome/notice') ?>" onclick="return confirm('Are you sure to delete');">Delete</a>
                   </td>
                 </tr>
 

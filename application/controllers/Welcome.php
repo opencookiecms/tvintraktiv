@@ -62,7 +62,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_banner();
-			$lastId=$this->Welcome_model->getLastId();
+			
 			redirect(base_url('welcome/banner'));
 		}
 
@@ -87,7 +87,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_video();
-			$lastId=$this->Welcome_model->getLastId();
+			
 			redirect(base_url('welcome/video'));
 		}
 	}
@@ -110,7 +110,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_slide();
-			$lastId=$this->Welcome_model->getLastId();
+			
 			redirect(base_url('welcome/photo'));
 		}
 
@@ -135,7 +135,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_notice();
-			$lastId=$this->Welcome_model->getLastId();
+
 			redirect(base_url('welcome/notice'));
 		}
 
@@ -159,7 +159,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_message();
-			$lastId=$this->Welcome_model->getLastId();
+			
 			redirect(base_url('welcome/message'));
 		}
 

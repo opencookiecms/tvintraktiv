@@ -63,7 +63,7 @@
                     <label>Format : 0000-00-00 00:00:00</label>
                   </div>
 
-                  <button type="edit" name="edit" class="btn btn-default">Cancel</button>
+                  <button type="cancel" name="cancel" class="btn btn-default">Cancel</button>
                   <button type="submit" name="submit" class="btn btn-default">Add</button>
                 </form>
               </div>
@@ -105,8 +105,8 @@
                   <td><?php echo $row->notice_content?></td>
                   <td><?php echo $row->notice_status?></td>
                   <td><?php echo $row->notice_reg?></td>
-                  <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
-                    <button type="delete" name="delete" class="btn btn-default">Delete</button>
+                  <td><a href="#" onclick="return confirm('Are you sure to delete');">Edit</a>
+                    <a href="<?php echo base_url('welcome/notice') ?>" onclick="return confirm('Are you sure to delete');">Delete</a>
                   </td>
                 </tr>
 
