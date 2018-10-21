@@ -211,7 +211,16 @@
             </div>
           </div>
           <footer class="main-footer" style="margin-left:0px;height:100px;">
-            get time
+
+          <center>
+            <p id="try"></p>
+
+            <script>
+              var d = new Date();
+              document.getElementById("try").innerHTML = d;
+            </script>
+          </center>
+
           </footer>
 
         </div>
