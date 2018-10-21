@@ -128,7 +128,7 @@
 
       <nav class="navbar navbar-static-top" style="margin-left:0px">
         <marquee behavior="scroll">
-          <h1>Selamat datang ke Jabatan Pengairan dan Saliran Daerah Kuala Muda</h1>
+          <h1><img src="<?php echo base_url('/assets/images/jps.png');?>"> Selamat datang ke Jabatan Pengairan dan Saliran Daerah Kuala Muda</h1>
         </marquee
 
         </nav>
@@ -202,7 +202,7 @@
                     <div class="mySlides fade">
                       <img src="<?php echo base_url('/assets/images/slide-1.jpg');?>" style="width:100%">
                     </div>
-                    
+
                     <div class="mySlides fade">
                       <img src="<?php echo base_url('/assets/images/slide-3.jpg');?>" style="width:100%">
                     </div>
