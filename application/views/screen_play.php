@@ -120,6 +120,7 @@
     .text {font-size: 11px}
   }
   </style>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
@@ -204,7 +205,7 @@
                     </div>
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/slide-3.jpg');?>" style="width:100%">
+                      <img src="<?php echo base_url('/assets/images/test.jpg');?>" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
@@ -238,9 +239,9 @@
                       }
                       slides[slideIndex-1].style.display = "block";  
                       dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-  }
-</script>
+                      setTimeout(showSlides, 2000); // Change image every 2 seconds
+                      }
+                  </script>
 
 
 
