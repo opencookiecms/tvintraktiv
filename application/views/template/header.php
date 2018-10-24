@@ -46,7 +46,7 @@ folder instead of downloading all of them to reduce the load. -->
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="<?php echo base_url('welcome/screen') ?>" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>J</b>PS</span>
       <!-- logo for regular state and mobile devices -->

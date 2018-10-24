@@ -105,8 +105,8 @@
                   <td><?php echo $row->notice_content?></td>
                   <td><?php echo $row->notice_status?></td>
                   <td><?php echo $row->notice_reg?></td>
-                  <td><a href="#" onclick="return confirm('Are you sure to delete');">Edit</a>
-                    <a href="<?php echo base_url('welcome/notice') ?>" onclick="return confirm('Are you sure to delete');">Delete</a>
+                  <td><a href="#">Edit</a>
+                    <a href="<?php echo base_url('welcome/screen') ?>">View</a>
                   </td>
                 </tr>
 
