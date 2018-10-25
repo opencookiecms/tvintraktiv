@@ -30,6 +30,8 @@
             <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
             <!--<form  method="POST" action="?php echo site_url('Projek/insert_stepone') ?>">-->
 
+
+
             <h2><?php echo $title; ?></h2>
 
             <?php echo validation_errors(); ?>
@@ -42,7 +44,7 @@
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Content:</label>
-                    <textarea class="ckeditor" name="content"></textarea>
+                    <textarea class="ckeditor" name="content"><?php echo $get_detail[0]->notice_content ?></textarea>
                     <script>
                     CKEDITOR.replace( 'content' );
                     </script>
@@ -105,7 +107,7 @@
                   <td><?php echo $row->notice_content?></td>
                   <td><?php echo $row->notice_status?></td>
                   <td><?php echo $row->notice_reg?></td>
-                  <td><a href="#">Edit</a>
+                  <td><a href="<?php echo base_url('welcome/noticedetails') ?>">Edit</a>
                     <a href="<?php echo base_url('welcome/screen') ?>">View</a>
                   </td>
                 </tr>

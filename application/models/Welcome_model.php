@@ -155,6 +155,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		return $query->result();
 	}
 
+	public function get_projekdetail() //view data
+  	{
+
+       $this->db->select('*');
+       $this->db->from('data_notice');
+
+       //Tambah join 2 table.,.,
+       $query = $this->db->get();
+
+       return $query->result();
+  	}
+
 
  }
 
