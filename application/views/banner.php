@@ -43,6 +43,9 @@
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Content:</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
+                    <script>
+                    CKEDITOR.replace( 'content' );
+                    </script>
                   </div>
 
                   <div class="form-group">
