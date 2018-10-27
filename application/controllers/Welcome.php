@@ -185,11 +185,16 @@ class Welcome extends CI_Controller {
 	public function noticedetails()
 	{
 
+		
 		$this->load->database();
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
 		$data['get_detail']=$this->Welcome_model->get_projekdetail();
 		$this->load->view('notice_details', $data);
 		$this->load->view('template/footer');
+		
+
+
+
 	}
 }

@@ -107,8 +107,7 @@
                   <td><?php echo $row->notice_content?></td>
                   <td><?php echo $row->notice_status?></td>
                   <td><?php echo $row->notice_reg?></td>
-                  <td><a href="<?php echo base_url('welcome/noticedetails') ?>">Edit</a>
-                    <a href="<?php echo base_url('welcome/screen') ?>">View</a>
+                  <td><a href="<?php echo base_url('welcome/noticedetails') ?>">View</a>
                   </td>
                 </tr>
 
