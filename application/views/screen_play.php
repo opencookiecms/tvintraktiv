@@ -159,7 +159,7 @@
 
               <!-- /.nav-tabs-custom -->
 
-              <div class="box box-solid bg-green" style="height:200px">
+              <div class="box box-solid bg-yellow" style="height:200px">
                 <center>
                   <?php
                   $i = 1;

@@ -22,7 +22,7 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-body">
-              <h3>Add New Banner</h3>
+              <h3>Add New Date</h3>
               <br>
                 <form>
                   <div class="form-group">
@@ -90,8 +90,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
-                    <button type="delete" name="delete" class="btn btn-default">Delete</button>
+                  <td>
                   </td>
                 </tr>
 

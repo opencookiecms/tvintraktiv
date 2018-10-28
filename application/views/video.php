@@ -102,8 +102,7 @@
                   <td><?php echo $row->playback_content?></td>
                   <td><?php echo $row->playback_status?></td>
                   <td><?php echo $row->playback_reg?></td>
-                  <td><button type="edit" name="edit" class="btn btn-default">Edit</button>
-                    <a href="<?php echo base_url('welcome/notice') ?>" onclick="return confirm('Are you sure to delete');">Delete</a>
+                  <td><a href="<?php echo base_url('welcome/noticedetails') ?>">View</a>
                   </td>
                 </tr>
 

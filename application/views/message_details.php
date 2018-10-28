@@ -4,7 +4,7 @@
   <section class="content-header">
     <center>
       <h2>
-        Notice Board
+        Message Board
       </h2>
     </center>
   </section>
@@ -29,12 +29,12 @@
 
         <div class="form-group">
           <label for="recipient-name" class="col-form-label">Title:</label>
-          <input type="text" class="form-control" id="title" name="title" value="<?php echo $get_detail[0]->notice_title?>" readonly>
+          <input type="text" class="form-control" id="title" name="title" value="<?php echo $get_detail[0]->message_title?>" readonly>
         </div>
 
         <div class="form-group">
           <label for="message-text" class="col-form-label">Content:</label>
-          <textarea class="ckeditor" name="content" readonly><?php echo $get_detail[0]->notice_content ?></textarea>
+          <textarea class="ckeditor" name="content" readonly><?php echo $get_detail[0]->message_content ?></textarea>
           <script>
             CKEDITOR.replace( 'content' );
           </script>
@@ -43,7 +43,7 @@
         <div class="form-group">
           <label for="message-text" class="col-form-label">Status:</label>
           <select type="text" class="form-control" id="status" name="status" readonly>
-            <option value="<?php echo $get_detail[0]->notice_status?>"><?php echo $get_detail[0]->notice_status?></option>
+            <option value="<?php echo $get_detail[0]->message_status?>"><?php echo $get_detail[0]->message_status?></option>
             <option value="Show">Show</option>
             <option value="Not Show">Not Show</option>
           </select>
@@ -51,7 +51,7 @@
 
         <div class="form-group">
           <label for="message-text" class="col-form-label">Register:</label>
-          <input class="form-control" type="timestamp" id="register" name="register" value="<?php echo $get_detail[0]->notice_reg?>" readonly>
+          <input class="form-control" type="timestamp" id="register" name="register" value="<?php echo $get_detail[0]->message_reg?>" readonly>
           <label>Format : 0000-00-00 00:00:00</label>
         </div>
 
@@ -71,15 +71,15 @@
 
             <?php echo validation_errors(); ?>
 
-            <?php echo form_open('welcome/notice_details'); ?>
+            <?php echo form_open('welcome/message_details'); ?>
                   <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Title:</label>
-                    <input type="text" class="form-control" id="title" name="title" value="<?php echo $get_detail[0]->notice_title ?>">
+                    <input type="text" class="form-control" id="title" name="title" value="<?php echo $get_detail[0]->message_title ?>">
                   </div>
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Content:</label>
-                    <textarea class="ckeditor" name="content1"><?php echo $get_detail[0]->notice_content ?></textarea>
+                    <textarea class="ckeditor" name="content1"><?php echo $get_detail[0]->message_content ?></textarea>
                     <script>
                     CKEDITOR.replace( 'content1' );
                     </script>
@@ -88,7 +88,7 @@
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Status:</label>
                     <select type="text" class="form-control" id="status" name="status">
-                      <option value="<?php echo $get_detail[0]->notice_status ?>"><?php echo $get_detail[0]->notice_status ?></option>
+                      <option value="<?php echo $get_detail[0]->message_status ?>"><?php echo $get_detail[0]->message_status ?></option>
                       <option value="Show">Show</option>
                       <option value="Not Show">Not Show</option>
                     </select>
@@ -96,7 +96,7 @@
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Register:</label>
-                    <input class="form-control" type="timestamp" id="register" name="register" value="<?php echo $get_detail[0]->notice_reg ?>">
+                    <input class="form-control" type="timestamp" id="register" name="register" value="<?php echo $get_detail[0]->message_reg ?>">
                     <label>Format : 0000-00-00 00:00:00</label>
                   </div>
 
