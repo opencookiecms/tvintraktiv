@@ -201,15 +201,15 @@
                   <div class="slideshow-container">
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/slide-1.jpg');?>" style="width:100%">
+                      <img src="<?php echo base_url('/assets/images/2.png');?>" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/test.jpg');?>" style="width:100%">
+                      <img src="<?php echo base_url('/assets/images/3.png');?>" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/try.jpg');?>" style="width:100%">
+                      <img src="<?php echo base_url('/assets/images/1.png');?>" style="width:100%">
                     </div>
 
                   </div>
