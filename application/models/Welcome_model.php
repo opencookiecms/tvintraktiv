@@ -80,8 +80,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	private function do_upload()
 	{
-		if(is_uploaded_file($_FILES["pic"]["tmp_name"]))
-			move_uploaded_file($_FILES["pic"]["tmp_name"], "./assets/images/".uniqid(rand()).$_FILES["pic"]["name"]);
+		$type = explode('.', $_FILES["pic"]["name"]);
+		$type = $type[count($type)-1];
+		$url = "./assets/images/".uniqid(rand()).".".$type;
+		if(in_array($type, array("jpg", "jpeg", "gif", "png")));
+
+			if(is_uploaded_file($_FILES["pic"]["tmp_name"]))
+				if(move_uploaded_file($_FILES["pic"]["tmp_name"], $url))
+					return $url;
+
+		return "";
+					
 	}
 
 
