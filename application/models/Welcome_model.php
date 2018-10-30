@@ -56,6 +56,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	{
  		$this->load->helper('url');
 
+ 		$this->do_upload();
+
  		$slide_title = $this->input->post('title');
  		$slide_content = $this->input->post('content');
  		$slide_status = $this->input->post('status');
@@ -70,6 +72,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
  		return $this->db->insert('data_slide', $data);
  	}
+
+ 	public function submit()
+	{
+		
+	}
+
+	private function do_upload()
+	{
+		if(is_uploaded_file($_FILES["pic"]["tmp_name"]))
+			move_uploaded_file($_FILES["pic"]["tmp_name"], "./assets/images/".uniqid(rand()).$_FILES["pic"]["name"]);
+	}
+
 
 
 ///Saving the data///////
@@ -178,6 +192,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
        return $query->result();
   	}
+
+  	//update function
+
+  	public function noticeupdate($data, $update)
+ 	{
+ 		$this->load->helper('url');
+
+ 		$notice_title = $this->input->post('title');
+ 		$notice_content = $this->input->post('content');
+ 		$notice_status = $this->input->post('status');
+ 		$notice_reg = $this->input->post('register');
+
+ 		$data = array(
+ 			'notice_title' => $notice_title,
+ 			'notice_content' => $notice_content,
+ 			'notice_status' => $notice_status,
+ 			'notice_reg' => $notice_reg
+ 			);
+
+ 		$this->db->replace('data_notice', $data);
+ 	}
 
   	
 

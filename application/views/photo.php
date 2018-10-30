@@ -34,15 +34,15 @@
 
             <?php echo validation_errors(); ?>
 
-            <?php echo form_open('welcome/photo'); ?>
+            <?php echo form_open_multipart('welcome/photo'); ?>
                   <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Title:</label>
                     <input type="text" class="form-control" id="title" name="title">
                   </div>
 
                   <div class="form-group">
-                    <label for="message-text" class="col-form-label">Content:</label>
-                    <textarea class="form-control" id="content" name="content"></textarea>
+                    <label for="message-text" class="col-form-label">Upload Photo:</label>
+                    <td><?php echo form_upload('pic'); ?></td>
                   </div>
 
                   <div class="form-group">
@@ -60,8 +60,7 @@
                     <label>Format : 0000-00-00 00:00:00</label>
                   </div>
 
-                  <button type="edit" name="edit" class="btn btn-default">Cancel</button>
-                  <button type="submit" name="submit" class="btn btn-default">Add</button>
+                  <td><?php echo form_submit('submit', 'Submit', 'class="btn btn-primary"'); ?></td>
                 </form>
               </div>
             </div>

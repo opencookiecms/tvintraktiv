@@ -71,7 +71,7 @@
 
             <?php echo validation_errors(); ?>
 
-            <?php echo form_open('welcome/notice_details'); ?>
+            <?php echo form_open('welcome/notice'); ?>
                   <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Title:</label>
                     <input type="text" class="form-control" id="title" name="title" value="<?php echo $get_detail[0]->notice_title ?>">
@@ -101,7 +101,7 @@
                   </div>
 
                   <button type="cancel" name="cancel" class="btn btn-default alert-danger">Cancel</button>
-                  <button type="submit" name="submit" class="btn btn-primary">Update</button>
+                  <button type="update" name="update" class="btn btn-primary">Update</button>
                 </form>
               </div>
             </div>

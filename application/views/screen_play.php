@@ -262,12 +262,6 @@
                 </div>
               </div>
 
-
-
-
-
-
-
             </section>
             <!-- right col -->
           </div>

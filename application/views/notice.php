@@ -44,7 +44,7 @@
 
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Content:</label>
-                    <textarea class="ckeditor" name="content"><?php echo $get_detail[0]->notice_content ?></textarea>
+                    <textarea class="ckeditor" name="content"></textarea>
                     <script>
                     CKEDITOR.replace( 'content' );
                     </script>

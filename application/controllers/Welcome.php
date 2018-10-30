@@ -49,6 +49,8 @@ class Welcome extends CI_Controller {
 	{
 		$data['title'] = 'Add New Banner';
 
+		$this->load->database();
+
 		$this->form_validation->set_rules('title', 'Title', 'required');
 
 		if($this->form_validation->run() == FALSE)
@@ -73,6 +75,8 @@ class Welcome extends CI_Controller {
 	{
 		$data['title'] = 'Add New Playback';
 
+		$this->load->database();
+
 		$this->form_validation->set_rules('title', 'Title', 'required');
 
 		if($this->form_validation->run() == FALSE)
@@ -96,6 +100,8 @@ class Welcome extends CI_Controller {
 	{
 		$data['title'] = 'Add New Slide';
 
+		$this->load->database();
+
 		$this->form_validation->set_rules('title', 'Title', 'required');
 
 		if($this->form_validation->run() == FALSE)
@@ -117,9 +123,12 @@ class Welcome extends CI_Controller {
 
 	}
 
+	
 	public function notice()
 	{
 		$data['title'] = 'Add New Notice';
+
+		$this->load->database();
 
 		$this->form_validation->set_rules('title', 'Title', 'required');
 
@@ -145,6 +154,8 @@ class Welcome extends CI_Controller {
 	public function message()
 	{
 		$data['title'] = 'Add New Message';
+
+		$this->load->database();
 
 		$this->form_validation->set_rules('title', 'Title', 'required');
 
@@ -205,4 +216,32 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/footer');
 		
 	}
+
+	///update function///
+
+	public function notice_update()
+	{
+
+		$this->load->database();
+
+		$this->form_validation->set_rules('title', 'Title', 'required');
+
+		if($this->form_validation->run() == FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('notice');
+			$this->load->view('template/footer');
+		}
+		else
+		{
+			$this->Welcome_model->noticeupdate($data, $this->input->post('notice_title'));
+			redirect(base_url('welcome/notice'));
+		}
+
+
+	}
+
+
 }
