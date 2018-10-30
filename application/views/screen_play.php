@@ -87,14 +87,15 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background: #D81B60;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.8s ease;
   }
 
   .active {
-    background-color: #717171;
+    background: -webkit-linear-gradient(to right, #e1eec3, #f05053); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e1eec3, #f05053);;
   }
 
   /* Fading animation */
@@ -122,7 +123,7 @@
   </style>
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-maroon sidebar-mini">
   <div class="wrapper">
 
     <header class="main-header">
@@ -151,7 +152,7 @@
             <!-- Left col -->
             <section class="col-lg-7 connectedSortable">
               <!-- Custom tabs (Charts with tabs)-->
-              <div class="box box-solid bg-light-blue-gradient">
+              <div class="box box-solid bg-maroon">
                 <div class="embed-responsive embed-responsive-16by9">
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
@@ -159,7 +160,7 @@
 
               <!-- /.nav-tabs-custom -->
 
-              <div class="box box-solid bg-yellow" style="height:200px">
+              <div class="box box-solid bg-maroon" style="height:200px" >
                 <center>
                   <?php
                   $i = 1;

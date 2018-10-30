@@ -18,7 +18,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
@@ -83,16 +83,16 @@ body {
 }
 .content-wrapper {
   min-height: 100%;
-  background-color: #ecf0f5;
+  background-color: #D81B60;
   z-index: 800;
   margin-left: 0px;
 }
 .main-footer {
-  background: #fff;
+  background: #D81B60;
   padding: 15px;
   color: #444;
     height: 80px;
-  border-top: 10px solid #d2d6de;
+  border-top: 10px solid #D81B60;
 }
 /* Fixed layout */
 .fixed .main-header,

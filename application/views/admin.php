@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-aqua">
+          <div class="small-box bg-blue">
             <div class="inner">
               <h3>1</h3>
 
@@ -32,7 +32,7 @@
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-green">
+          <div class="small-box bg-navy">
             <div class="inner">
               <h3>2<sup style="font-size: 20px"></sup></h3>
 
@@ -47,7 +47,7 @@
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-yellow">
+          <div class="small-box bg-teal">
             <div class="inner">
               <h3>3</h3>
 
@@ -62,7 +62,7 @@
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-aqua">
+          <div class="small-box bg-maroon">
             <div class="inner">
               <h3>4</h3>
 
@@ -77,7 +77,7 @@
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-green">
+          <div class="small-box bg-fuchsia">
             <div class="inner">
               <h3>5</h3>
 
@@ -92,7 +92,7 @@
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-yellow">
+          <div class="small-box bg-purple">
             <div class="inner">
               <h3>6</h3>
 
