@@ -187,9 +187,13 @@ class Welcome extends CI_Controller {
 
 	public function settings()
 	{
+
+		$this->load->database();
+		
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
-		$this->load->view('settings');
+		$data['get_height']=$this->Welcome_model->get_settings();
+		$this->load->view('settings', $data);
 		$this->load->view('template/footer');
 	}
 

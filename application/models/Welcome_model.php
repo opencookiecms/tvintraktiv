@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	{
  		$this->load->helper('url');
 
- 		$banner_title = $this->input->post("title");
+ 		$banner_title = $this->input->post('title');
  		$banner_content = $this->input->post('content');
  		$banner_status = $this->input->post('status');
  		$banner_reg = $this->input->post('register');
@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  		$this->do_upload();
 
  		$slide_title = $this->input->post('title');
- 		$slide_content = $this->input->post('content');
+ 		$slide_content = $this->input->post('link');
  		$slide_status = $this->input->post('status');
  		$slide_reg = $this->input->post('register');
 
@@ -78,16 +78,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 	}
 
-	private function do_upload()
+	public function do_upload()
 	{
 		$type = explode('.', $_FILES["pic"]["name"]);
 		$type = $type[count($type)-1];
-		$url = "./assets/images/".uniqid(rand()).".".$type;
+		$link = "./assets/images/".uniqid(rand()).".".$type;
 		if(in_array($type, array("jpg", "jpeg", "gif", "png")));
 
 			if(is_uploaded_file($_FILES["pic"]["tmp_name"]))
-				if(move_uploaded_file($_FILES["pic"]["tmp_name"], $url))
-					return $url;
+				if(move_uploaded_file($_FILES["pic"]["tmp_name"], $link))
+					return $link;
 
 		return "";
 					
@@ -200,6 +200,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        $query = $this->db->get();
 
        return $query->result();
+  	}
+
+  	public function get_settings()
+  	{
+  		$this->db->select('*');
+  		$this->db->from('signagesetting');
+
+  		$query = $this->db->get();
+
+  		return $query->result();
   	}
 
   	//update function

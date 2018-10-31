@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+</head>
+</html>
+
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -24,7 +31,7 @@
               <p>BANNER</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="fas fa-bullhorn"></i>
             </div>
             <a href="<?php echo site_url('welcome/banner/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -39,7 +46,7 @@
               <p>VIDEO PLAYBACK</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="fas fa-film"></i>
             </div>
             <a href="<?php echo site_url('welcome/video/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -54,7 +61,7 @@
               <p>PHOTOGRAPH</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="far fa-file-image"></i>
             </div>
             <a href="<?php echo site_url('welcome/photo/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -69,7 +76,7 @@
               <p>NOTICE BOARD</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="far fa-comment"></i>
             </div>
             <a href="<?php echo site_url('welcome/notice/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -84,7 +91,7 @@
               <p>MESSAGE BOARD</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="far fa-envelope"></i>
             </div>
             <a href="<?php echo site_url('welcome/message/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -99,7 +106,7 @@
               <p>DATE & TIME</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="fas fa-calendar-alt"></i>
             </div>
             <a href="<?php echo site_url('welcome/date/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>

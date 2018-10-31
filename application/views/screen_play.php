@@ -274,7 +274,7 @@
           <section class="col-lg-12 connectedSortable">
             <div class="box">
 
-              <marquee behavior="scroll" height="80" class="marquee">
+              <marquee behavior="scroll" height="<?php echo $get_height[0]->messageheight ?>" class="marquee">
                 <?php
                 $pre     = "<span class='spantest'>";
                 $append  = "</span>";
@@ -290,14 +290,14 @@
           </div>
           <footer class="main-footer" style="margin-left:0px;height:100px;">
 
-          <center>
+          <h2><center>
             <p id="try"></p>
 
             <script>
               var d = new Date();
               document.getElementById("try").innerHTML = d;
             </script>
-          </center>
+          </center></h2>
 
           </footer>
 
