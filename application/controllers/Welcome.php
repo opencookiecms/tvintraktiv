@@ -38,6 +38,7 @@ class Welcome extends CI_Controller {
 
 		///load the data to show on screen/////
 		$this->load->database();
+		$data['get_height']=$this->Welcome_model->get_settings();
  		$data['get_banner']=$this->Welcome_model->get_bannerview();
  		$data['get_message']=$this->Welcome_model->get_messageview();
  		$data['get_notice']= $this->Welcome_model->get_noticeview();
@@ -64,7 +65,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_banner();
-			
+
 			redirect(base_url('welcome/banner'));
 		}
 
@@ -91,7 +92,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_video();
-			
+
 			redirect(base_url('welcome/video'));
 		}
 	}
@@ -116,14 +117,14 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_slide();
-			
+
 			redirect(base_url('welcome/photo'));
 		}
 
 
 	}
 
-	
+
 	public function notice()
 	{
 		$data['title'] = 'Add New Notice';
@@ -170,7 +171,7 @@ class Welcome extends CI_Controller {
 		else
 		{
 			$this->Welcome_model->create_message();
-			
+
 			redirect(base_url('welcome/message'));
 		}
 
@@ -189,7 +190,7 @@ class Welcome extends CI_Controller {
 	{
 
 		$this->load->database();
-		
+
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
 		$data['get_height']=$this->Welcome_model->get_settings();
@@ -206,7 +207,7 @@ class Welcome extends CI_Controller {
 		$data['get_detail']=$this->Welcome_model->get_projekdetail();
 		$this->load->view('notice_details', $data);
 		$this->load->view('template/footer');
-		
+
 	}
 
 	public function messagedetails()
@@ -218,7 +219,7 @@ class Welcome extends CI_Controller {
 		$data['get_detail']=$this->Welcome_model->get_projekdetails();
 		$this->load->view('message_details', $data);
 		$this->load->view('template/footer');
-		
+
 	}
 
 	///update function///
