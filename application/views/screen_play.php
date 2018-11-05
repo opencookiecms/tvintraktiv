@@ -160,7 +160,7 @@
 
               <!-- /.nav-tabs-custom -->
 
-              <div class="box box-solid bg-maroon" style="height:200px" >
+              <div class="box box-solid bg-maroon" style="height:<?php echo $get_height[0]->bannerheight ?>" >
                 <center>
                   <?php
                   $i = 1;
@@ -288,7 +288,7 @@
 
             </div>
           </div>
-          <footer class="main-footer" style="margin-left:0px;height:100px;">
+          <footer class="main-footer" style="margin-left:0px;height:<?php echo $get_height[0]->footerheight ?>;">
 
           <h2><center>
             <p id="try"></p>
