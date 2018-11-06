@@ -43,7 +43,7 @@
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Video Link:</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
-                    <label>Hint : Right click at youtube video and choose COPY EMBED CODE</label>
+                    <label style="color: #FF0000">Hint : Right click at youtube video and choose COPY EMBED CODE</label>
                   </div>
 
                   <div class="form-group">
@@ -58,7 +58,7 @@
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Register:</label>
                     <input class="form-control" type="timestamp" id="register" name="register">
-                    <label>Format : 0000-00-00 00:00:00</label>
+                    <label style="color: #FF0000">Format : 0000-00-00 00:00:00</label>
                   </div>
 
                   <button type="edit" name="edit" class="btn btn-default">Cancel</button>
