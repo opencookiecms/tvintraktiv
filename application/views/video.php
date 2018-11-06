@@ -43,6 +43,7 @@
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Video Link:</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
+                    <label>Hint : Right click at youtube video and choose COPY EMBED CODE</label>
                   </div>
 
                   <div class="form-group">
@@ -102,7 +103,7 @@
                   <td><?php echo $row->playback_content?></td>
                   <td><?php echo $row->playback_status?></td>
                   <td><?php echo $row->playback_reg?></td>
-                  <td><a href="<?php echo base_url('welcome/noticedetails') ?>">View</a>
+                  <td><a href="#">Delete</a>
                   </td>
                 </tr>
 
