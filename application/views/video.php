@@ -43,7 +43,7 @@
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Video Link:</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
-                    <label style="color: #FF0000">Hint : Right click at youtube video and choose COPY EMBED CODE</label>
+                    <label style="color: #FF0000">Hint : Right click on youtube video and choose COPY EMBED CODE</label>
                   </div>
 
                   <div class="form-group">
