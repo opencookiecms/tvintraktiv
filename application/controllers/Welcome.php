@@ -42,6 +42,7 @@ class Welcome extends CI_Controller {
  		$data['get_banner']=$this->Welcome_model->get_bannerview();
  		$data['get_message']=$this->Welcome_model->get_messageview();
  		$data['get_notice']= $this->Welcome_model->get_noticeview();
+ 		$data['get_playback']= $this->Welcome_model->get_playbackview();
  		$this->load->view('screen_play', $data);
 
 	}

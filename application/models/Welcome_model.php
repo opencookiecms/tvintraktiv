@@ -145,7 +145,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	public function get_playbackview()
 	{
-		$query = $this->db->get('data_playback');
+		$this->db->select('*');
+    	$this->db->from('data_playback');
+
+		$query = $this->db->get();
 		return $query->result();
 	}
 

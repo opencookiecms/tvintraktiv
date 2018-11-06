@@ -41,7 +41,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="message-text" class="col-form-label">Content:</label>
+                    <label for="message-text" class="col-form-label">Video Link:</label>
                     <textarea class="form-control" id="content" name="content"></textarea>
                   </div>
 
