@@ -287,12 +287,7 @@
           <footer class="main-footer" style="margin-left:0px;height:<?php echo $get_height[0]->footerheight ?>;">
 
           <h2><center>
-            <p id="try"></p>
-
-            <script>
-              var d = new Date();
-              document.getElementById("try").innerHTML = d;
-            </script>
+            <iframe src="http://free.timeanddate.com/clock/i6hqacc2/n122/tlmy/fn4/fs30/tt0/tw0/tm1/tb2" frameborder="0" width="280" height="39"></iframe>
           </center></h2>
 
           </footer>

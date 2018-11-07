@@ -51,7 +51,7 @@
                   <td><?php echo $row->messageheight?></td>
                   <td><?php echo $row->bannerheight?></td>
                   <td><?php echo $row->footerheight?></td>
-                  <td><a href="#">Delete</a>
+                  <td><a href="#">Update</a>
                   </td>
                 </tr>
 

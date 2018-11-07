@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  		$this->do_upload();
 
  		$slide_title = $this->input->post('title');
- 		$slide_content = $this->input->post('link');
+ 		$slide_content = $this->input->post('type');
  		$slide_status = $this->input->post('status');
  		$slide_reg = $this->input->post('register');
 
