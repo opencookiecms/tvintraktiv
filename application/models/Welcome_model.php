@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
  	public function submit()
 	{
-		
+
 	}
 
 	public function do_upload()
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					return $link;
 
 		return "";
-					
+
 	}
 
 
@@ -146,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	public function get_playbackview()
 	{
 		$this->db->select('*');
-    	$this->db->from('data_playback');
+    $this->db->from('data_playback');
 
 		$query = $this->db->get();
 		return $query->result();
@@ -173,7 +173,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	public function get_messageview()
 	{
-    	
+
     	$this->db->select('*');
     	$this->db->from('data_message');
 
@@ -236,7 +236,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  		$this->db->replace('data_notice', $data);
  	}
 
-  	
+
 
  }
 

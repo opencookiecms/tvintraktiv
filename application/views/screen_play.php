@@ -154,7 +154,7 @@
               <!-- Custom tabs (Charts with tabs)-->
               <div class="box box-solid bg-maroon">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <?php echo $get_playback[0]->playback_content ?>
+                  <?php echo $get_playback[0]->playback_content?>
                 </div>
               </div>
 
@@ -252,7 +252,7 @@
                 <div class="box-body">
                   <span class="loremss">
                     <marquee behavior="scroll" direction="up" height="350">
-                      <?php echo $get_notice[0]->notice_content ?>
+                      <?php echo $get_notice[0]->notice_content?>
 
                     </marquee>
                   </span>
