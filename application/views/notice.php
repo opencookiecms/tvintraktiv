@@ -107,7 +107,7 @@
                   <td><?php echo $row->notice_content?></td>
                   <td><?php echo $row->notice_status?></td>
                   <td><?php echo $row->notice_reg?></td>
-                  <td><a href="<?php echo site_url("welcome/delete/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                  <td><a href="<?php echo site_url("welcome/deletenotice/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
                   </td>
                 </tr>
 

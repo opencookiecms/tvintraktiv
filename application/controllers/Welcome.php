@@ -258,10 +258,32 @@ class Welcome extends CI_Controller {
 
 	}
 
-	public function delete($id)
+	public function deletenotice($id)
  	{
  		$this->db->where('id', $id);
  		$this->db->delete('data_notice');
+
+ 	}
+
+ 	public function deletebanner($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_banner');
+
+ 	}
+
+ 	public function deletemessage($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_message');
+
+ 	}
+
+ 	public function deletevideo($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_playback');
+
  	}
 
 
