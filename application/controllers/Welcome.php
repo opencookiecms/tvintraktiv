@@ -249,5 +249,20 @@ class Welcome extends CI_Controller {
 
 	}
 
+	//UPDATE
+
+	public function edit($id)
+	{
+		$this->load->model(Welcome_model);
+
+
+	}
+
+	public function delete($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_notice');
+ 	}
+
 
 }

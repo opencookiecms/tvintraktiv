@@ -27,6 +27,8 @@
 
         <?php echo validation_errors(); ?>
 
+        <?php echo form_open('welcome/notice_update'); ?>
+
         <div class="form-group">
           <label for="recipient-name" class="col-form-label">Title:</label>
           <input type="text" class="form-control" id="title" name="title" value="<?php echo $get_detail[0]->notice_title?>" readonly>
@@ -71,7 +73,7 @@
 
             <?php echo validation_errors(); ?>
 
-            <?php echo form_open('welcome/notice'); ?>
+            <?php echo form_open('welcome/notice_update'); ?>
                   <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Title:</label>
                     <input type="text" class="form-control" id="title" name="title" value="<?php echo $get_detail[0]->notice_title ?>">

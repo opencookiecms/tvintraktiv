@@ -233,25 +233,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  			'notice_reg' => $notice_reg
  			);
 
- 		$this->db->replace('data_notice', $data);
+ 		$this->db->where('id', $id);
+
+ 		$this->db->update('signage', $data);
  	}
-
-  	
-
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>
+}
