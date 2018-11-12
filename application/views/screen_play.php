@@ -90,7 +90,7 @@
     background: #D81B60;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.8s ease;
+    transition: background-color 1.6s ease;
   }
 
   .active {
@@ -270,7 +270,7 @@
           <section class="col-lg-12 connectedSortable">
             <div class="box">
 
-              <marquee behavior="scroll" height="<?php echo $get_height[0]->messageheight ?>" class="marquee">
+              <marquee behavior="scroll" height="<?php echo $get_height[0]->bannerheight ?>" class="marquee">
                 <?php
                 $pre     = "<span class='spantest'>";
                 $append  = "</span>";

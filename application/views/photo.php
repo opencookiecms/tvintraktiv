@@ -101,7 +101,7 @@
                   <td><?php echo $row->slide_content?></td>
                   <td><?php echo $row->slide_status?></td>
                   <td><?php echo $row->slide_reg?></td>
-                  <td><a href="<?php echo base_url('welcome/noticedetails') ?>">View</a>
+                  <td><a href="<?php echo site_url("welcome/deletephoto/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
                   </td>
                 </tr>
 

@@ -249,5 +249,59 @@ class Welcome extends CI_Controller {
 
 	}
 
+	//UPDATE
+
+	public function edit($id)
+	{
+		$this->load->model(Welcome_model);
+
+
+	}
+
+	public function deletenotice($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_notice');
+
+ 		redirect(base_url('welcome/notice'));
+
+ 	}
+
+ 	public function deletebanner($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_banner');
+
+ 		redirect(base_url('welcome/banner'));
+
+ 	}
+
+ 	public function deletemessage($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_message');
+
+ 		redirect(base_url('welcome/message'));
+
+ 	}
+
+ 	public function deletevideo($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_playback');
+
+ 		redirect(base_url('welcome/video'));
+
+ 	}
+
+ 	public function deletephoto($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_slide');
+
+ 		redirect(base_url('welcome/photo'));
+
+ 	}
+
 
 }

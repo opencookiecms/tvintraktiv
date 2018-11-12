@@ -105,7 +105,7 @@
                   <td><?php echo $row->banner_content?></td>
                   <td><?php echo $row->banner_status?></td>
                   <td><?php echo $row->banner_reg?></td>
-                  <td><a href="<?php echo base_url('welcome/noticedetails') ?>">View</a>
+                  <td><a href="<?php echo site_url("welcome/deletebanner/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
                   </td>
                 </tr>
 
