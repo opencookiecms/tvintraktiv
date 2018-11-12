@@ -263,12 +263,16 @@ class Welcome extends CI_Controller {
  		$this->db->where('id', $id);
  		$this->db->delete('data_notice');
 
+ 		redirect(base_url('welcome/notice'));
+
  	}
 
  	public function deletebanner($id)
  	{
  		$this->db->where('id', $id);
  		$this->db->delete('data_banner');
+
+ 		redirect(base_url('welcome/banner'));
 
  	}
 
@@ -277,12 +281,16 @@ class Welcome extends CI_Controller {
  		$this->db->where('id', $id);
  		$this->db->delete('data_message');
 
+ 		redirect(base_url('welcome/message'));
+
  	}
 
  	public function deletevideo($id)
  	{
  		$this->db->where('id', $id);
  		$this->db->delete('data_playback');
+
+ 		redirect(base_url('welcome/video'));
 
  	}
 
