@@ -103,7 +103,7 @@
                   <td><?php echo $row->playback_content?></td>
                   <td><?php echo $row->playback_status?></td>
                   <td><?php echo $row->playback_reg?></td>
-                  <td><td><a href="<?php echo site_url("welcome/deletevideo/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                  <td><a href="<?php echo site_url("welcome/deletevideo/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
                   </td>
                 </tr>
 

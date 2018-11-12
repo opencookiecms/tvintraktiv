@@ -294,5 +294,14 @@ class Welcome extends CI_Controller {
 
  	}
 
+ 	public function deletephoto($id)
+ 	{
+ 		$this->db->where('id', $id);
+ 		$this->db->delete('data_slide');
+
+ 		redirect(base_url('welcome/photo'));
+
+ 	}
+
 
 }
