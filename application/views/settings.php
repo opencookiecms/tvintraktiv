@@ -30,7 +30,6 @@
                   <th>Message Height</th>
                   <th>Banner Height</th>
                   <th>Footer Height</th>
-                  <th></th>
                 </tr>
               </thead>
 
@@ -51,7 +50,6 @@
                   <td><?php echo $row->messageheight?></td>
                   <td><?php echo $row->bannerheight?></td>
                   <td><?php echo $row->footerheight?></td>
-                  <td><a href="#">Update</a>
                   </td>
                 </tr>
 

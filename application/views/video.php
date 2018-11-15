@@ -40,10 +40,9 @@
                     <input type="text" class="form-control" id="title" name="title">
                   </div>
 
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Video Link:</label>
-                    <textarea class="form-control" id="content" name="content"></textarea>
-                    <label style="color: #FF0000">Hint : Right click on youtube video and choose COPY EMBED CODE</label>
+                  <div class="form-group" >
+                    <label for="message-text" class="col-form-label">Upload Video:</label>
+                    <td><?php echo form_upload('vid'); ?></td>
                   </div>
 
                   <div class="form-group">
@@ -61,8 +60,8 @@
                     <label style="color: #FF0000">Format : 0000-00-00 00:00:00</label>
                   </div>
 
-                  <button type="edit" name="edit" class="btn btn-default">Cancel</button>
-                  <button type="submit" name="submit" class="btn btn-default">Add</button>
+                  <button type="cancel" name="cancel" class="btn btn-default">Cancel</button>
+                  <button type="submit" name="submit" class="btn btn-default">Submit</button>
                 </form>
               </div>
             </div>

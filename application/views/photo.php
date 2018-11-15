@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -41,8 +42,8 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="message-text" class="col-form-label">Upload Photo:</label>
-                    <td><?php echo form_upload('pic'); ?></td>
+                    <label for="message-text" class="col-form-label" >Upload Photo:</label><br>
+                    <input type="file" name="pic" size="20" />
                   </div>
 
                   <div class="form-group">
@@ -60,7 +61,7 @@
                     <label>Format : 0000-00-00 00:00:00</label>
                   </div>
 
-                  <td><?php echo form_submit('submit', 'Submit', 'class="btn btn-primary"'); ?></td>
+                  <td><input type="submit" value="Submit" /></td>
                 </form>
               </div>
             </div>
@@ -101,7 +102,7 @@
                   <td><?php echo $row->slide_content?></td>
                   <td><?php echo $row->slide_status?></td>
                   <td><?php echo $row->slide_reg?></td>
-                  <td><a href="<?php echo site_url("welcome/deletephoto/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                  <td><a href="<?php echo site_url("welcome/deletephoto/" . $row->id); ?>" onclick="return confirm('Are you sure?')">Delete</a>
                   </td>
                 </tr>
 

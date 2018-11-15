@@ -223,41 +223,6 @@ class Welcome extends CI_Controller {
 
 	}
 
-	///update function///
-
-	public function notice_update()
-	{
-
-		$this->load->database();
-
-		$this->form_validation->set_rules('title', 'Title', 'required');
-
-		if($this->form_validation->run() == FALSE)
-
-		{
-			$this->load->view('template/header');
-			$this->load->view('template/sidebar');
-			$this->load->view('notice');
-			$this->load->view('template/footer');
-		}
-		else
-		{
-			$this->Welcome_model->noticeupdate($data, $this->input->post('notice_title'));
-			redirect(base_url('welcome/notice'));
-		}
-
-
-	}
-
-	//UPDATE
-
-	public function edit($id)
-	{
-		$this->load->model(Welcome_model);
-
-
-	}
-
 	public function deletenotice($id)
  	{
  		$this->db->where('id', $id);
