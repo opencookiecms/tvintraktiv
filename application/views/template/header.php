@@ -46,7 +46,7 @@ folder instead of downloading all of them to reduce the load. -->
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="<?php echo base_url() ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>J</b>PS</span>
       <!-- logo for regular state and mobile devices -->
@@ -64,7 +64,7 @@ folder instead of downloading all of them to reduce the load. -->
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
+              <i class="fa fa-envelope"></i>
               <span class="label label-success">0</span>
             </a>
             <ul class="dropdown-menu">
