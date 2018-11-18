@@ -172,7 +172,7 @@
 
                    <tr>
                    <br>
-                    <td><?php echo $row->banner_title?></td>
+                    <h2><?php echo $row->banner_title?></h2>
                     <br>
                     <td><?php echo $row->banner_content?></td>
                     <br>
@@ -202,15 +202,15 @@
                   <div class="slideshow-container">
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/2.png');?>" style="width:100%">
+                      <img src="<?php echo base_url('/assets/images/try.jpg');?>" style="width:100%" >
                     </div>
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/3.png');?>" style="width:100%">
+                      <img src="<?php echo base_url('/assets/images/test.png');?>" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/1.png');?>" style="width:100%" alt="Random Image">
+                      <img src="<?php echo base_url('/assets/images/testing.png');?>" style="width:100%">
                     </div>
 
                   </div>

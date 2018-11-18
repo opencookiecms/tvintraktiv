@@ -96,21 +96,6 @@
             <a href="<?php echo site_url('welcome/message/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-purple">
-            <div class="inner">
-              <h3>6</h3>
-
-              <p>DATE & TIME</p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-calendar-alt"></i>
-            </div>
-            <a href="<?php echo site_url('welcome/date/') ?>" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
         <!-- ./col -->
         <!-- ./col -->
       </div>
