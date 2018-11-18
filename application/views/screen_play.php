@@ -154,7 +154,7 @@
               <!-- Custom tabs (Charts with tabs)-->
               <div class="box box-solid bg-maroon">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <?php echo $get_playback[0]->playback_content?>
+                  <iframe width="853" height="480" src="https://www.youtube.com/embed/Vi-6-xEjgpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
 
@@ -210,7 +210,7 @@
                     </div>
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/1.png');?>" style="width:100%">
+                      <img src="<?php echo base_url('/assets/images/1.png');?>" style="width:100%" alt="Random Image">
                     </div>
 
                   </div>

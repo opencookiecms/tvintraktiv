@@ -99,7 +99,7 @@
                  <tr>
                   <td><?php echo $row->id?></td>
                   <td><?php echo $row->slide_title?></td>
-                  <td><?php echo $row->slide_content?></td>
+                  <td><img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>"></td>
                   <td><?php echo $row->slide_status?></td>
                   <td><?php echo $row->slide_reg?></td>
                   <td><a href="<?php echo site_url("welcome/deletephoto/" . $row->id); ?>" onclick="return confirm('Are you sure?')">Delete</a>

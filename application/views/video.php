@@ -42,7 +42,7 @@
 
                   <div class="form-group" >
                     <label for="message-text" class="col-form-label">Upload Video:</label>
-                    <td><?php echo form_upload('vid'); ?></td>
+                    <input type="file" name="vid" size="20" />
                   </div>
 
                   <div class="form-group">
@@ -60,8 +60,7 @@
                     <label style="color: #FF0000">Format : 0000-00-00 00:00:00</label>
                   </div>
 
-                  <button type="cancel" name="cancel" class="btn btn-default">Cancel</button>
-                  <button type="submit" name="submit" class="btn btn-default">Submit</button>
+                  <td><input type="submit" value="Submit" /></td>
                 </form>
               </div>
             </div>

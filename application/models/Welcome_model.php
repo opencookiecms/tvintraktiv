@@ -36,22 +36,18 @@ class Welcome_model extends CI_Model
 	public function create_video()
 	{
 		$this->load->helper('url');
-
 		$playback_title = $this->input->post('title');
 		$playback_content = $this->input->post('content');
 		$playback_status = $this->input->post('status');
 		$playback_reg = $this->input->post('register');
-
 		$data = array(
 			'playback_title' => $playback_title,
 			'playback_content' => $playback_content,
 			'playback_status' => $playback_status,
 			'playback_reg' => $playback_reg
 			);
-
 		return $this->db->insert('data_playback', $data);
 	}
-
 
 	public function create_slide()
 	{
@@ -76,28 +72,21 @@ class Welcome_model extends CI_Model
 		$type = $type[count($type)-1];
 		$link = "./assets/images/".$_FILES["pic"]["name"];
 		if(in_array($type, array("jpg", "jpeg", "gif", "png")));
-
 		if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
-
 			$data = array(
 				'slide_content' => $_FILES["pic"]["name"],  
 				'slide_title' => $title,
 				'slide_status' => $status,
 				'slide_reg' => $reg
 				);
-
 			$this->db->insert('data_slide', $data);
-
 			if(move_uploaded_file($_FILES["pic"]["tmp_name"], $link)) {
 				return $link;
 			}
-
 		} else {  
 			return "";
 		} 
 	}
-
-
 
 ///Saving the data///////
 	public function create_notice()
