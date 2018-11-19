@@ -34,7 +34,7 @@
 
             <?php echo validation_errors(); ?>
 
-            <?php echo form_open('welcome/video'); ?>
+            <?php echo form_open_multipart('welcome/video'); ?>
                   <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Title:</label>
                     <input type="text" class="form-control" id="title" name="title">

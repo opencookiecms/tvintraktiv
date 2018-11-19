@@ -36,18 +36,38 @@ class Welcome_model extends CI_Model
 	public function create_video()
 	{
 		$this->load->helper('url');
+
 		$playback_title = $this->input->post('title');
-		$playback_content = $this->input->post('content');
 		$playback_status = $this->input->post('status');
 		$playback_reg = $this->input->post('register');
-		$data = array(
-			'playback_title' => $playback_title,
-			'playback_content' => $playback_content,
-			'playback_status' => $playback_status,
-			'playback_reg' => $playback_reg
-			);
-		return $this->db->insert('data_playback', $data);
+
+		$this->do_upload_video($playback_title,$playback_status,$playback_reg);
+
 	}
+
+	public function do_upload_video($title = null, $status = null, $reg = null) 
+	{
+
+		$type = explode('.', $_FILES["vid"]["name"]);
+		$type = $type[count($type)-1];
+		$link = "./assets/video/".$_FILES["vid"]["name"];
+		if(in_array($type, array("mp4")));
+		if(is_uploaded_file($_FILES["vid"]["tmp_name"])) {
+			$data = array(
+				'playback_content' => $_FILES["vid"]["name"],  
+				'playback_title' => $title,
+				'playback_status' => $status,
+				'playback_reg' => $reg
+				);
+			$this->db->insert('data_playback', $data);
+			if(move_uploaded_file($_FILES["vid"]["tmp_name"], $link)) {
+				return $link;
+			}
+		} else {  
+			return "";
+		} 
+	}
+
 
 	public function create_slide()
 	{
