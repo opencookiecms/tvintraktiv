@@ -167,7 +167,10 @@ class Welcome_model extends CI_Model
 
 	public function get_slideview()
 	{
-		$query = $this->db->get('data_slide');
+		$this->db->select('*');
+		$this->db->from('data_slide');
+
+		$query = $this->db->get();
 		return $query->result();
 	}
 

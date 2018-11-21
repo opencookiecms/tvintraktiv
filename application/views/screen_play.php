@@ -120,7 +120,7 @@
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
   }
-  </style>
+</style>
 
 </head>
 <body class="hold-transition skin-maroon sidebar-mini">
@@ -131,7 +131,7 @@
       <nav class="navbar navbar-static-top" style="margin-left:0px">
         <marquee behavior="scroll">
           <h1><img src="<?php echo base_url('/assets/images/jps.png');?>"> Selamat datang ke Jabatan Pengairan dan Saliran Daerah Kuala Muda</h1>
-        </marquee
+          </marquee
 
         </nav>
       </header>
@@ -171,27 +171,27 @@
                    ?>
 
                    <tr>
-                   <br>
-                    <h2><?php echo $row->banner_title?></h2>
-                    <br>
-                    <td><?php echo $row->banner_content?></td>
-                    <br>
+                     <br>
+                     <h2><?php echo $row->banner_title?></h2>
+                     <br>
+                     <td><?php echo $row->banner_content?></td>
+                     <br>
 
-                  </tr>
-
-
-                  <?php } ?>
-                </div>
-              </center>
+                   </tr>
 
 
+                   <?php } ?>
+                 </div>
+               </center>
 
 
-            </section>
 
-            <!-- /.Left col -->
-            <!-- right col (We are only adding the ID to make the widgets sortable)-->
-            <section class="col-lg-5 connectedSortable">
+
+             </section>
+
+             <!-- /.Left col -->
+             <!-- right col (We are only adding the ID to make the widgets sortable)-->
+             <section class="col-lg-5 connectedSortable">
 
 
               <!-- Map box -->
@@ -202,7 +202,15 @@
                   <div class="slideshow-container">
 
                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/try.jpg');?>" style="width:100%" >
+                      <?php 
+                      $i = 1; 
+
+                      foreach ($get_slide as $row) {
+
+                       ?> 
+                       <img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
+
+                       <?php } ?>
                     </div>
 
                     <div class="mySlides fade">
@@ -212,6 +220,8 @@
                     <div class="mySlides fade">
                       <img src="<?php echo base_url('/assets/images/testing.png');?>" style="width:100%">
                     </div>
+
+                    
 
                   </div>
                   <br>
@@ -241,7 +251,7 @@
                       slides[slideIndex-1].style.display = "block";
                       dots[slideIndex-1].className += " active";
                       setTimeout(showSlides, 2000); // Change image every 2 seconds
-                      }
+                    }
                   </script>
 
                 </div>
@@ -286,9 +296,9 @@
           </div>
           <footer class="main-footer" style="margin-left:0px;height:<?php echo $get_height[0]->footerheight ?>;">
 
-          <h2><center>
-            <iframe src="http://free.timeanddate.com/clock/i6hqacc2/n122/tlmy/fn4/fs30/tt0/tw0/tm1/tb2" frameborder="0" width="280" height="39"></iframe>
-          </center></h2>
+            <h2><center>
+              <iframe src="http://free.timeanddate.com/clock/i6hqacc2/n122/tlmy/fn4/fs30/tt0/tw0/tm1/tb2" frameborder="0" width="280" height="39"></iframe>
+            </center></h2>
 
           </footer>
 
