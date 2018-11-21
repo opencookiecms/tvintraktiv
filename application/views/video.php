@@ -98,7 +98,9 @@
                  <tr>
                   <td><?php echo $row->id?></td>
                   <td><?php echo $row->playback_title?></td>
-                  <td><?php echo $row->playback_content?></td>
+                  <td><video width="300" height="300" controls>
+                  <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+                  </video></td>
                   <td><?php echo $row->playback_status?></td>
                   <td><?php echo $row->playback_reg?></td>
                   <td><a href="<?php echo site_url("welcome/deletevideo/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>

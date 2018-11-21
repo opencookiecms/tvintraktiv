@@ -154,8 +154,18 @@
               <!-- Custom tabs (Charts with tabs)-->
               <div class="box box-solid bg-maroon">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="853" height="480" src="https://www.youtube.com/embed/Vi-6-xEjgpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+
+                <?php
+                  $i = 1;
+
+                  foreach ($get_playback as $row) {
+                 # code..
+
+                   ?>
+                  <video width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls>
+                  <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+                  </video>
+                <?php } ?>
               </div>
 
               <!-- /.nav-tabs-custom -->
@@ -208,7 +218,7 @@
                       foreach ($get_slide as $row) {
 
                        ?> 
-                       <img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
+                       <img src="<?php echo base_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
 
                        <?php } ?>
                     </div>
@@ -223,7 +233,7 @@
 
                     
 
-                  </div>
+                </div>
                   <br>
 
                   <div style="text-align:center">
