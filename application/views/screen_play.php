@@ -155,71 +155,66 @@
               <div class="box box-solid bg-maroon">
                 <div class="embed-responsive embed-responsive-16by9">
 
-                <?php
+                  <?php
                   $i = 1;
 
                   foreach ($get_playback as $row) {
                  # code..
 
                    ?>
-                  <video width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls>
-                  <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
-                  </video>
+                   <video width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls>
+                    <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+                    </video>
 
-                <?php } ?>
+                    <?php } ?>
 
-              </div>
+                  </div>
 
-              <br>
+                  <br>
 
-              <!-- /.nav-tabs-custom -->
+                  <!-- /.nav-tabs-custom -->
 
-              <div class="box box-solid bg-maroon" style="height:<?php echo $get_height[0]->bannerheight ?>" >
-                <center>
-                  <?php
-                  $i = 1;
+                  <div class="box box-solid bg-maroon" style="height:<?php echo $get_height[0]->bannerheight ?>" >
+                    <center>
+                      <?php
 
-                  foreach ($get_banner as $row) {
-                 # code..
+                      foreach ($get_banner as $row) {
+       # code..
 
-                   ?>
+                        if ($row->banner_status == 'Show') {
 
-                   <tr>
-                     <br>
-                     <h2><?php echo $row->banner_title?></h2>
-                     <br>
-                     <td><?php echo $row->banner_content?></td>
-                     <br>
+                        echo $row->banner_content;                                        
+                      } else {
 
-                   </tr>
+                        echo " ";
+                      }
 
+                    } ?>
 
-                   <?php } ?>
-                 </div>
-               </center>
+                  </center>
+                </div>
 
 
 
+              </section>
 
-             </section>
-
-             <!-- /.Left col -->
-             <!-- right col (We are only adding the ID to make the widgets sortable)-->
-             <section class="col-lg-5 connectedSortable">
+              <!-- /.Left col -->
+              <!-- right col (We are only adding the ID to make the widgets sortable)-->
+              <section class="col-lg-5 connectedSortable">
 
 
-              <!-- Map box -->
-              <div class="box box-success">
-                <div class="box-body">
-                  <div class="slideshow-container">
-                <?php 
+                <!-- Map box -->
+                <div class="box box-success">
+                  <div class="box-body">
+                    <div class="slideshow-container">
+                      <?php 
                       foreach ($get_slide as $row) {    ?> 
 
-                    <div class="mySlides fade">
+                      <div class="mySlides fade">
                        <img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
-                    </div>
+                     </div>
 
-                       <?php } ?>
+                     <?php } ?>
 
 <!--                     <div class="mySlides fade">
                       <img src="<?php echo base_url('/assets/images/test.png');?>" style="width:100%">
@@ -229,7 +224,7 @@
                       <img src="<?php echo base_url('/assets/images/testing.png');?>" style="width:100%">
                     </div> -->
 
-                </div>
+                  </div>
                   <br>
 
                   <div style="text-align:center">
