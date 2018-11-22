@@ -165,8 +165,12 @@
                   <video width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls>
                   <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
                   </video>
+
                 <?php } ?>
+
               </div>
+
+              <br>
 
               <!-- /.nav-tabs-custom -->
 
@@ -206,32 +210,24 @@
 
               <!-- Map box -->
               <div class="box box-success">
-
                 <div class="box-body">
-
                   <div class="slideshow-container">
+                <?php 
+                      foreach ($get_slide as $row) {    ?> 
 
                     <div class="mySlides fade">
-                      <?php 
-                      $i = 1; 
-
-                      foreach ($get_slide as $row) {
-
-                       ?> 
-                       <img src="<?php echo base_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
-
-                       <?php } ?>
+                       <img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
                     </div>
 
-                    <div class="mySlides fade">
+                       <?php } ?>
+
+<!--                     <div class="mySlides fade">
                       <img src="<?php echo base_url('/assets/images/test.png');?>" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
                       <img src="<?php echo base_url('/assets/images/testing.png');?>" style="width:100%">
-                    </div>
-
-                    
+                    </div> -->
 
                 </div>
                   <br>
