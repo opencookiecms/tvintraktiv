@@ -263,7 +263,20 @@
                 <div class="box-body">
                   <span class="loremss">
                     <marquee behavior="scroll" direction="up" height="350">
-                      <?php echo $get_notice[0]->notice_content?>
+                      <?php
+
+                      foreach ($get_notice as $row) {
+       # code..
+
+                        if ($row->notice_status == 'Show') {
+
+                        echo $row->notice_content;                                        
+                      } else {
+
+                        echo " ";
+                      }
+
+                    } ?>
 
                     </marquee>
                   </span>
