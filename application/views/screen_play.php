@@ -186,7 +186,7 @@
 
                         if ($row->banner_status == 'Show') {
 
-                        echo $row->banner_content;                                        
+                        echo $row->banner_content;
                       } else {
 
                         echo " ";
@@ -210,8 +210,8 @@
                 <div class="box box-success">
                   <div class="box-body">
                     <div class="slideshow-container">
-                      <?php 
-                      foreach ($get_slide as $row) {    ?> 
+                      <?php
+                      foreach ($get_slide as $row) {    ?>
 
                       <div class="mySlides fade">
                        <img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
@@ -219,13 +219,6 @@
 
                      <?php } ?>
 
-<!--                     <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/test.png');?>" style="width:100%">
-                    </div>
-
-                    <div class="mySlides fade">
-                      <img src="<?php echo base_url('/assets/images/testing.png');?>" style="width:100%">
-                    </div> -->
 
                   </div>
                   <br>
@@ -273,7 +266,7 @@
 
                         if ($row->notice_status == 'Show') {
 
-                        echo $row->notice_content;                                        
+                        echo $row->notice_content;
                       } else {
 
                         echo " ";

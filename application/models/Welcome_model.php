@@ -2,14 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- *
- */
+*
+*/
 class Welcome_model extends CI_Model
 {
 
 	public function __construct()
 	{
- 		# code...
+		# code...
 		$this->load->database();
 	}
 
@@ -28,7 +28,7 @@ class Welcome_model extends CI_Model
 			'banner_content' => $banner_content,
 			'banner_status' => $banner_status,
 			'banner_reg' => $banner_reg
-			);
+		);
 
 		return $this->db->insert('data_banner', $data);
 	}
@@ -45,7 +45,7 @@ class Welcome_model extends CI_Model
 
 	}
 
-	public function do_upload_video($title = null, $status = null, $reg = null) 
+	public function do_upload_video($title = null, $status = null, $reg = null)
 	{
 
 		$type = explode('.', $_FILES["vid"]["name"]);
@@ -54,18 +54,18 @@ class Welcome_model extends CI_Model
 		if(in_array($type, array("mp4")));
 		if(is_uploaded_file($_FILES["vid"]["tmp_name"])) {
 			$data = array(
-				'playback_content' => $_FILES["vid"]["name"],  
+				'playback_content' => $_FILES["vid"]["name"],
 				'playback_title' => $title,
 				'playback_status' => $status,
 				'playback_reg' => $reg
-				);
+			);
 			$this->db->insert('data_playback', $data);
 			if(move_uploaded_file($_FILES["vid"]["tmp_name"], $link)) {
 				return $link;
 			}
-		} else {  
+		} else {
 			return "";
-		} 
+		}
 	}
 
 
@@ -86,7 +86,7 @@ class Welcome_model extends CI_Model
 
 	}
 
-	public function do_upload_image($title = null, $status = null, $reg = null) 
+	public function do_upload_image($title = null, $status = null, $reg = null)
 	{
 		$type = explode('.', $_FILES["pic"]["name"]);
 		$type = $type[count($type)-1];
@@ -94,21 +94,21 @@ class Welcome_model extends CI_Model
 		if(in_array($type, array("jpg", "jpeg", "gif", "png")));
 		if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
 			$data = array(
-				'slide_content' => $_FILES["pic"]["name"],  
+				'slide_content' => $_FILES["pic"]["name"],
 				'slide_title' => $title,
 				'slide_status' => $status,
 				'slide_reg' => $reg
-				);
+			);
 			$this->db->insert('data_slide', $data);
 			if(move_uploaded_file($_FILES["pic"]["tmp_name"], $link)) {
 				return $link;
 			}
-		} else {  
+		} else {
 			return "";
-		} 
+		}
 	}
 
-///Saving the data///////
+	///Saving the data///////
 	public function create_notice()
 	{
 		$this->load->helper('url');
@@ -123,7 +123,7 @@ class Welcome_model extends CI_Model
 			'notice_content' => $notice_content,
 			'notice_status' => $notice_status,
 			'notice_reg' => $notice_reg
-			);
+		);
 
 		return $this->db->insert('data_notice', $data);
 	}
@@ -142,14 +142,14 @@ class Welcome_model extends CI_Model
 			'message_content' => $message_content,
 			'message_status' => $message_status,
 			'message_reg' => $message_reg
-			);
+		);
 
 		return $this->db->insert('data_message', $data);
 	}
 
 
 
- ///this is get function to display on screen......///////////
+	///this is get function to display on screen......///////////
 	public function get_bannerview()
 	{
 		$query = $this->db->get('data_banner');
@@ -203,33 +203,48 @@ class Welcome_model extends CI_Model
 		$this->db->select('*');
 		$this->db->from('data_notice');
 
-       //Tambah join 2 table.,.,
+		//Tambah join 2 table.,.,
 		$query = $this->db->get();
 
 		return $query->result();
 	}
 
-  	public function get_projekdetails() //view data
-  	{
+	public function get_projekdetails() //view data
+	{
 
-  		$this->db->select('*');
-  		$this->db->from('data_message');
+		$this->db->select('*');
+		$this->db->from('data_message');
 
-       //Tambah join 2 table.,.,
-  		$query = $this->db->get();
+		//Tambah join 2 table.,.,
+		$query = $this->db->get();
 
-  		return $query->result();
-  	}
+		return $query->result();
+	}
 
-  	public function get_settings()
-  	{
-  		$this->db->select('*');
-  		$this->db->from('signagesetting');
+	public function get_settings()
+	{
+		$this->db->select('*');
+		$this->db->from('signagesetting');
 
-  		$query = $this->db->get();
+		$query = $this->db->get();
 
-  		return $query->result();
-  	}
+		return $query->result();
+	}
 
-  	//
-  }
+	public function getLastidimages()
+	{
+
+
+			$this->db->select('id');
+			$this->db->from('data_slide');
+			$this->db->order_by('id','ASC');
+			$this->db->limit(1);
+
+			$query = $this->db->get();
+
+			return $query->result();
+
+	}
+
+	//
+}
