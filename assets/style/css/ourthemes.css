@@ -1,0 +1,125 @@
+.uigradien{
+  background: #E8CBC0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+body,html{
+  height: 100%
+}
+
+.whiteboxlogo
+{
+  position: relative;
+  border-radius: 0px;
+  background: #ffffff;
+  margin-bottom: 1px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display:block;
+  text-align:justify;
+  padding-top: 10px;
+
+}
+.fonthead
+{
+  font-weight: bold;
+  padding-top: 20px;
+  color: white;
+  font-size: 30px;
+  font: 30px 'body_font','Helvetica Neue',Helvetica,Arial,sans-serif bold;
+  -webkit-font-smoothing: antialiased;
+}
+.whiteboxcontent
+{
+  position: relative;
+  border-radius: 0px;
+
+  margin-bottom: 1px;
+  margin-right: 0px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display:block;
+  text-align:justify;
+  padding-top: 10px;
+
+}
+.blackbox
+{
+  position: relative;
+  border-radius: 0px;
+  background: #ffffff;
+  margin-bottom: 1px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display:block;
+  text-align:justify;
+  padding-top: 10px;
+  height: 500px;
+
+}
+
+.imagebox
+{
+  @include material-shadow();
+
+  position: relative;
+  border-radius: 0px;
+  background: linear-gradient(to right bottom, #9e66c6, #6027e1);
+  margin-bottom: 1px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display:block;
+  text-align:justify;
+  padding-top: 10px;
+  height: 350px;
+  transition: opacity 0.4s $bezier, transform 0.4s $bezier,
+    box-shadow 0.4s $bezier;
+    flex-direction: column;
+
+
+
+}
+
+.imagebox2
+{
+
+
+}
+.noticebox{
+  position: relative;
+  border-radius: 0px;
+  background: #ffffff;
+  margin-bottom: 1px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display:block;
+  text-align:justify;
+  padding-top: 10px;
+  height: 347px;
+}
+.bannerbox{
+  position: relative;
+  border-radius: 0px;
+  background: #ffffff;
+  margin-bottom: 1px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display:block;
+  text-align:justify;
+  padding-top: 10px;
+  height: 200px;
+}
+
+.hourbox
+{
+  position: relative;
+  border-radius: 0px;
+  background: #ffffff;
+  margin-top: 1px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  display:block;
+  text-align:justify;
+  padding-top: 10px;
+  height: 150px;
+
+}
+.headsize
+{
+  height:90px;
+}
