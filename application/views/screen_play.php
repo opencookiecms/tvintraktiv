@@ -129,12 +129,15 @@
     <header class="main-header">
 
       <nav class="navbar navbar-static-top" style="margin-left:0px">
-        <marquee behavior="scroll">
-          <h1><img src="<?php echo base_url('/assets/images/jps.png');?>"> Selamat datang ke Jabatan Pengairan dan Saliran Daerah Kuala Muda</h1>
-          </marquee
-
-        </nav>
+        <center>
+          <h1>SELAMAT DATANG</h1>
+          <h1><img src="<?php echo base_url('/assets/images/jps.png');?>">JABATAN PENGAIRAN DAN SALIRAN DAERAH KUALA MUDA</h1>
+        </center>
+      </nav>
       </header>
+
+      <br>
+      <br>
 
 
       <!-- Content Wrapper. Contains page content -->
