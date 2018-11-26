@@ -14,7 +14,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
   folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/skins/_all-skins.min.css">
@@ -123,18 +123,21 @@
 </style>
 
 </head>
-<body class="hold-transition skin-maroon sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
 
     <header class="main-header">
 
       <nav class="navbar navbar-static-top" style="margin-left:0px">
-        <marquee behavior="scroll">
-          <h1><img src="<?php echo base_url('/assets/images/jps.png');?>"> Selamat datang ke Jabatan Pengairan dan Saliran Daerah Kuala Muda</h1>
-          </marquee
-
-        </nav>
+        <center>
+          <h1>SELAMAT DATANG</h1>
+          <h1><img src="<?php echo base_url('/assets/images/jps.png');?>">JABATAN PENGAIRAN DAN SALIRAN DAERAH KUALA MUDA</h1>
+        </center>
+      </nav>
       </header>
+
+      <br>
+      <br>
 
 
       <!-- Content Wrapper. Contains page content -->
@@ -152,7 +155,7 @@
             <!-- Left col -->
             <section class="col-lg-7 connectedSortable">
               <!-- Custom tabs (Charts with tabs)-->
-              <div class="box box-solid bg-maroon">
+              <div class="box box-solid bg-blue">
                 <div class="embed-responsive embed-responsive-16by9">
 
                   <?php
@@ -174,7 +177,7 @@
 
                   <!-- /.nav-tabs-custom -->
 
-                  <div class="box box-solid bg-maroon" style="height:<?php echo $get_height[0]->bannerheight ?>" >
+                  <div class="box box-solid bg-blue" style="height:<?php echo $get_height[0]->bannerheight ?>" >
                     <center>
                       <?php
 
