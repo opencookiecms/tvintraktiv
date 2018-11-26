@@ -3,11 +3,12 @@
 <head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.css">
+  <link href="<?php echo base_url();?>assets/style/css/ourthemes.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper ps">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <center>
@@ -30,7 +31,7 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-body">
-              
+
               <?php if (isset($_SESSION['success'])) { ?>
               <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
               <?php
@@ -84,7 +85,7 @@
             <h3 class="box-title">List of Banner</h3>
           </div>
           <!-- /.box-header -->
-          
+
           <div class="box-body">
             <table id="example1" class="table table-bordered table-striped">
               <thead>
@@ -99,13 +100,13 @@
               </thead>
 
               <tbody>
-               <?php 
-               $i = 1; 
+               <?php
+               $i = 1;
 
                foreach ($get_banner as $row) {
-                 # code.. 
+                 # code..
 
-                 ?> 
+                 ?>
 
                  <tr>
                   <td><?php echo $row->id?></td>
@@ -142,4 +143,3 @@
 </div>
 </div>
 <!-- /.content-wrapper -->
-
