@@ -14,7 +14,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
   folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/skins/_all-skins.min.css">
@@ -123,7 +123,7 @@
 </style>
 
 </head>
-<body class="hold-transition skin-maroon sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
 
     <header class="main-header">
@@ -152,7 +152,7 @@
             <!-- Left col -->
             <section class="col-lg-7 connectedSortable">
               <!-- Custom tabs (Charts with tabs)-->
-              <div class="box box-solid bg-maroon">
+              <div class="box box-solid bg-blue">
                 <div class="embed-responsive embed-responsive-16by9">
 
                   <?php
@@ -174,7 +174,7 @@
 
                   <!-- /.nav-tabs-custom -->
 
-                  <div class="box box-solid bg-maroon" style="height:<?php echo $get_height[0]->bannerheight ?>" >
+                  <div class="box box-solid bg-blue" style="height:<?php echo $get_height[0]->bannerheight ?>" >
                     <center>
                       <?php
 
