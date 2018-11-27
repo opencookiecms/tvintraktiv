@@ -173,18 +173,18 @@
              <div class="embed-responsive embed-responsive-16by9">
 
 
-              <video id="myvideo" width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
+              <video id="myvideo" width="100" height="<?php echo $get_height[0]->mediaheight ?>" autoplay>
                <?php
                foreach ($get_playback as $row) { ?>
 
-  <source class="<?php if($row->id==$lastvedioid){echo "active";} ?>"
-  src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+               <source class="<?php if($row->id==$lastvedioid){echo "active";} ?>"
+                src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
 
-                 <?php } ?>
+                <?php } ?>
 
-               </video>
+              </video>
 
-               <script type='text/javascript'>
+              <script type='text/javascript'>
 
                 var myvid = document.getElementById('myvideo');
 
