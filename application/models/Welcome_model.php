@@ -247,6 +247,22 @@ class Welcome_model extends CI_Model
 
 	}
 
+
+	public function getLastidVedio()
+	{
+
+
+			$this->db->select('id');
+			$this->db->from('data_playback');
+			$this->db->order_by('id','ASC');
+			$this->db->limit(1);
+
+			$query = $this->db->get();
+
+			return $query->result();
+
+	}
+
 	public function setSetting($data, $update)
 	{
 

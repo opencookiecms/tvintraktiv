@@ -56,12 +56,12 @@
     font-family: 'Abel', sans-serif;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-family: 'Patrick Hand', cursive;
-    }
-   .mySlides {display: none;}
-   img {vertical-align: middle;}
+  }
+  .mySlides {display: none;}
+  img {vertical-align: middle;}
 
-   /* Slideshow container */
-   .slideshow-container {
+  /* Slideshow container */
+  .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -145,133 +145,142 @@
           <h1><img src="<?php echo base_url('/assets/images/jps.png');?>">JABATAN PENGAIRAN DAN SALIRAN DAERAH KUALA MUDA</h1>
         </center>
       </nav>
-      </header>
+    </header>
 
-      <br>
-      <br>
-
-
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper clear-fixmargin" style="margin-left:0px;">
-
-        <!-- Main content -->
-        <section class="content">
-          <!-- Small boxes (Stat box) -->
-          <div class="row">
-            <!--this is card row-->
-          </div>
-          <!-- /.row -->
-          <!-- Main row -->
-          <div class="row">
-            <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
-              <!-- Custom tabs (Charts with tabs)-->
-              <div class="box box-solid bg-blue">
-                <div class="embed-responsive embed-responsive-16by9">
-
-                  <?php
-
-                  foreach ($get_playback as $row) {
-                 # code..
-
-                   ?>
-                  <video id="try" width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
-                    <source id="ss" src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
-                  </video>
-
-                  <script>
-                    video_count = 1;
-                    videoPlayer = document.getElementById("ss");
-                    video=document.getElementById("try");
-
-                    function run() {
-                      video_count++;
-                      if (video_count == 4) video_count = 1;
-                      videoPlayer.setAttribute("src", "<?php echo base_url("/assets/video/")?>" +video_count+".mp4");
-                      video.play();
-                    }
+    <br>
+    <br>
 
 
-                  </script>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper clear-fixmargin" style="margin-left:0px;">
 
-                    <?php } ?>
+      <!-- Main content -->
+      <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <!--this is card row-->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-7 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="box box-solid bg-blue">
+             <?php
+             $lastvedioid= $get_lastidv[0]->id;
+             ?>
+             <div class="embed-responsive embed-responsive-16by9">
 
-                  </div>
 
-                  <br>
+              <video id="myvideo" width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
+               <?php
+               foreach ($get_playback as $row) { ?>
 
-                  <!-- /.nav-tabs-custom -->
+  <source class="<?php if($row->id==$lastvedioid){echo "active";} ?>"
+  src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
 
-                  <div class="box box-solid bg-blue" style="height:<?php echo $get_height[0]->bannerheight ?>" >
-                    <center>
-                      <?php
+                 <?php } ?>
 
-                      foreach ($get_banner as $row) {
+               </video>
+
+               <script type='text/javascript'>
+
+                var myvid = document.getElementById('myvideo');
+
+                myvid.addEventListener('ended', function(e) {
+  // get the active source and the next video source.
+  // I set it so if there's no next, it loops to the first one
+  var activesource = document.querySelector("#myvideo source.active");
+  var nextsource = document.querySelector("#myvideo source.active + source") || document.querySelector("#myvideo source:first-child");
+  
+  // deactivate current source, and activate next one
+  activesource.className = "";
+  nextsource.className = "active";
+  
+  // update the video source and play
+  myvid.src = nextsource.src;
+  myvid.play();
+});
+</script>
+
+
+</div>
+
+<br>
+
+<!-- /.nav-tabs-custom -->
+
+<div class="box box-solid bg-blue" style="height:<?php echo $get_height[0]->bannerheight ?>" >
+  <center>
+    <?php
+
+    foreach ($get_banner as $row) {
        # code..
 
-                        if ($row->banner_status == 'Show') {
+      if ($row->banner_status == 'Show') {
 
-                        echo $row->banner_content;
-                      } else {
+        echo $row->banner_content;
+      } else {
 
-                        echo " ";
-                      }
+        echo " ";
+      }
 
-                    } ?>
+    } ?>
 
-                  </center>
-                </div>
-
-
-
-              </section>
-
-              <!-- /.Left col -->
-              <!-- right col (We are only adding the ID to make the widgets sortable)-->
-              <section class="col-lg-5 connectedSortable">
+  </center>
+</div>
 
 
-                <!-- Map box -->
-                <div class="box box-success">
-                  <div class="box-body">
-                    <div class="slideshow-container">
-                      <?php
-                      foreach ($get_slide as $row) {    ?>
 
-                      <div class="mySlides fade">
-                       <img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
-                     </div>
+</section>
 
-                     <?php } ?>
+<!-- /.Left col -->
+<!-- right col (We are only adding the ID to make the widgets sortable)-->
+<section class="col-lg-5 connectedSortable">
 
 
-                  </div>
-                  <br>
+  <!-- Map box -->
+  <div class="box box-success">
+    <div class="box-body">
+      <div class="slideshow-container">
+        <?php
+        foreach ($get_slide as $row) {    ?>
 
-                  <div style="text-align:center">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                  </div>
+        <div class="mySlides fade">
+         <img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 100%">
+       </div>
 
-                  <script>
-                    var slideIndex = 0;
-                    showSlides();
+       <?php } ?>
 
-                    function showSlides() {
-                      var i;
-                      var slides = document.getElementsByClassName("mySlides");
-                      var dots = document.getElementsByClassName("dot");
-                      for (i = 0; i < slides.length; i++) {
-                       slides[i].style.display = "none";
-                     }
-                     slideIndex++;
-                     if (slideIndex > slides.length) {slideIndex = 1}
-                      for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                      }
-                      slides[slideIndex-1].style.display = "block";
-                      dots[slideIndex-1].className += " active";
+
+     </div>
+     <br>
+
+     <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+       }
+       slideIndex++;
+       if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
                       setTimeout(showSlides, 1000); // Change image every 2 seconds
                     }
                   </script>
@@ -291,13 +300,13 @@
 
                         if ($row->notice_status == 'Show') {
 
-                        echo $row->notice_content;
-                      } else {
+                          echo $row->notice_content;
+                        } else {
 
-                        echo " ";
-                      }
+                          echo " ";
+                        }
 
-                    } ?>
+                      } ?>
 
                     </marquee>
                   </span>
