@@ -187,7 +187,7 @@
                     function run() {
                       video_count++;
                       if (video_count == 4) video_count = 1;
-                      videoPlayer.setAttribute("src", "assets/video" +video_count+".mp4");
+                      videoPlayer.setAttribute("src", "<?php echo base_url("/assets/video/")?>" +video_count+".mp4");
                       video.play();
                     }
 
