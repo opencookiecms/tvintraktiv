@@ -63,12 +63,6 @@
                     </select>
                   </div>
 
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Register:</label>
-                    <input class="form-control" type="timestamp" id="register" name="register">
-                    <label>Format : 0000-00-00 00:00:00</label>
-                  </div>
-
                   <td><input type="submit" value="Submit" /></td>
                 </form>
               </div>
@@ -90,7 +84,6 @@
                   <th>Title</th>
                   <th>Content</th>
                   <th>Status</th>
-                  <th>Register</th>
                   <th></th>
                 </tr>
               </thead>
@@ -109,7 +102,6 @@
                   <td><?php echo $row->slide_title?></td>
                   <td><img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>"></td>
                   <td><?php echo $row->slide_status?></td>
-                  <td><?php echo $row->slide_reg?></td>
                   <td><a href="<?php echo site_url("welcome/deletephoto/" . $row->id); ?>" onclick="return confirm('Are you sure?')">Delete</a>
                   </td>
                 </tr>

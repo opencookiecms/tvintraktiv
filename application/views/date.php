@@ -51,11 +51,6 @@
                     </select>
                   </div>
 
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Register:</label>
-                    <input class="form-control" id="message-text">
-                  </div>
-
                   <button type="edit" name="edit" class="btn btn-default">Cancel</button>
                   <button type="delete" name="delete" class="btn btn-default">Add</button>
                 </form>
@@ -78,7 +73,6 @@
                   <th>Title</th>
                   <th>Content</th>
                   <th>Status</th>
-                  <th>Register</th>
                   <th></th>
                 </tr>
               </thead>

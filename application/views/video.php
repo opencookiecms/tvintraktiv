@@ -62,12 +62,6 @@
                     </select>
                   </div>
 
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Register:</label>
-                    <input class="form-control" type="timestamp" id="register" name="register">
-                    <label style="color: #FF0000">Format : 0000-00-00 00:00:00</label>
-                  </div>
-
                   <td><input type="submit" value="Submit" /></td>
                 </form>
               </div>
@@ -89,7 +83,6 @@
                   <th>Title</th>
                   <th>Content</th>
                   <th>Status</th>
-                  <th>Register</th>
                   <th></th>
                 </tr>
               </thead>
@@ -110,7 +103,6 @@
                   <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
                   </video></center></td>
                   <td><?php echo $row->playback_status?></td>
-                  <td><?php echo $row->playback_reg?></td>
                   <td><a href="<?php echo site_url("welcome/deletevideo/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
                   </td>
                 </tr>
