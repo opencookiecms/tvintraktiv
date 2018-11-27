@@ -1,88 +1,132 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.css">
-</head>
-</html>
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
+<style>
+  .error {color: #FF0000;}
+</style>
+<div class="content-wrapper ps">
+  <!-- Content Header (Page header)
   <section class="content-header">
     <center>
-      <h2 style="color:#ffff">
-        Settings
-      </h2>
+      <h1>
+        Daftar Projek
+      </h1>
     </center>
   </section>
-  <br>
+-->
+<br>
 
-  <!-- Main content -->
-  <section class="content">
-    <div class="row">
-      <div class="table-responsive"></div>
-      <div class="col-md-12">
+<!-- Main content -->
+<section class="content">
 
-        <div class="box">
-          <!-- /.box-header -->
-          
-          <div class="box-body">
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Logo Height</th>
-                  <th>Media Height</th>
-                  <th>Slide Height</th>
-                  <th>Message Height</th>
-                  <th>Banner Height</th>
-                  <th>Footer Height</th>
-                </tr>
-              </thead>
+  <div class="row">
+    <div class="col-lg-12">
 
-              <tbody>
-               <?php 
-               $i = 1; 
+      <?php if (isset($_SESSION['success'])) { ?>
+      <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
+      <?php
+    } ?>
+    <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
+    <!--<form  method="POST" action="?php echo site_url('Projek/insert_stepone') ?>">-->
 
-               foreach ($get_height as $row) {
-                 # code.. 
-
-                 ?> 
-
-                 <tr>
-                  <td><?php echo $row->id?></td>
-                  <td><?php echo $row->logoheight?></td>
-                  <td><?php echo $row->mediaheight?></td>
-                  <td><?php echo $row->slideheight?></td>
-                  <td><?php echo $row->messageheight?></td>
-                  <td><?php echo $row->bannerheight?></td>
-                  <td><?php echo $row->footerheight?></td>
-                  </td>
-                </tr>
+    <br>
 
 
-                <?php } ?>
 
-              </tbody>
 
-            </table>
+     <div class="box box-info">
+      <div class="box-header with-border">
+        <h3 class="box-title">Settings</h3>
+      </div><!-- end of box header-->
 
+      <div class="box-body">
+        <div class="form-group">
+          <label class="col-sm-2">Id</label>
+
+          <div class="col-sm-2">
+            <input type="text" class="form-control" name="hiddenid" value="<?php echo $get_height[0]->id ?>">
           </div>
-          <!-- /.box-body -->
         </div>
-        <!-- /.box -->
 
       </div>
-      <!-- /.col -->
+
+      <div class="box-body">
+        <div class="form-group">
+          <label class="col-sm-2">Logo Height</label>
+
+          <div class="col-sm-2">
+            <input type="text" class="form-control" name="logoheight" value="<?php echo $get_height[0]->logoheight ?>">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box-body">
+        <div class="form-group">
+          <label class="col-sm-2">Media Height</label>
+
+          <div class="col-sm-2">
+            <input type="text" class="form-control" name="mediaheight" value="<?php echo $get_height[0]->mediaheight ?>">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box-body">
+        <div class="form-group">
+          <label class="col-sm-2">Slide Height</label>
+
+          <div class="col-sm-2">
+            <input type="text" class="form-control" name="slideheight" value="<?php echo $get_height[0]->slideheight ?>">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box-body">
+        <div class="form-group">
+          <label class="col-sm-2">Message Height</label>
+
+          <div class="col-sm-2">
+            <input type="text" class="form-control" name="messageheight" value="<?php echo $get_height[0]->messageheight ?>">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box-body">
+        <div class="form-group">
+          <label class="col-sm-2">Banner Height</label>
+
+          <div class="col-sm-2">
+            <input type="text" class="form-control" name="bannerheight" value="<?php echo $get_height[0]->bannerheight ?>">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box-body">
+        <div class="form-group">
+          <label class="col-sm-2">Footer Height</label>
+
+          <div class="col-sm-2">
+            <input type="text" class="form-control" name="footerheight" value="<?php echo $get_height[0]->footerheight ?>">
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="box-footer">
+        <button type="submit" name="submit" class="btn btn-default">Save</button>
+      </div>
     </div>
-
-
-
-
-  </section>
-  <!-- /.content -->
-
+  </form>
 </div>
+</div><!--end of row-->
+
+
+
+</section>
+<!-- /.content -->
+
 </div>
 <!-- /.content-wrapper -->
-
