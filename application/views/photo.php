@@ -11,7 +11,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <center>
-      <h2>
+      <h2 style="color:#ffff">
         Slide
       </h2>
     </center>

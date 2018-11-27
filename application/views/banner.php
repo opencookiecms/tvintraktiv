@@ -12,9 +12,9 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <center>
-      <h2>
+      <h1 style="color:#ffff">
         Banner
-      </h2>
+      </h1>
     </center>
   </section>
   <br>

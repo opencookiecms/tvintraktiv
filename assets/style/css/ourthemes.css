@@ -27,7 +27,7 @@ body,html{
   padding-top: 20px;
   color: white;
   font-size: 30px;
-  font: 30px 'body_font','Helvetica Neue',Helvetica,Arial,sans-serif bold;
+  font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
   -webkit-font-smoothing: antialiased;
 }
 .whiteboxcontent

@@ -10,7 +10,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <center>
-      <h2>
+      <h2 style="color:#ffff">
         Video Playback
       </h2>
     </center>
