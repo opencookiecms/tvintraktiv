@@ -221,12 +221,13 @@ class Welcome_model extends CI_Model
 		return $query->result();
 	}
 
-	public function get_settings()
+	public function get_settings($id)
 	{
 		$this->db->select('*');
 		$this->db->from('signagesetting');
 
-		$query = $this->db->get();
+		$this->db->where('id', $id);
+		$query=$this->db->get();
 
 		return $query->result();
 	}

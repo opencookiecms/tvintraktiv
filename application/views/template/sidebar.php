@@ -21,9 +21,8 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
 
-      <li><a href="<?php echo base_url('welcome/settings') ?>"><i class="fa fa-book"></i> <span>Settings</span></a></li>
+      <li><a href="<?php echo base_url('welcome/settings/1') ?>"><i class="fa fa-book"></i> <span>Settings</span></a></li>
       <li><a href="<?php echo base_url() ?>"><i class="fa fa-book"></i> <span>Menu</span></a></li>
-
       <li><a href="<?php echo base_url('welcome/screen_dasboard') ?>"><i class="fa fa-book"></i> <span>Screen</span></a></li>
 
     </ul>
