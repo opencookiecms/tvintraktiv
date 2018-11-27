@@ -266,7 +266,7 @@ class Welcome_model extends CI_Model
       'logoheight' => $signage_logoheight,
       'mediaheight' => $signage_mediaheight,
       'slideheight' => $signage_slideheight,
-      'messageheight' => $signage_messageheight],
+      'messageheight' => $signage_messageheight,
       'bannerheight' => $sigange_bannerheight,
       'footerheight' => $signage_footerheight,
 			'id'=> $signage_id
