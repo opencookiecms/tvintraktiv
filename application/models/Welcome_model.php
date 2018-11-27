@@ -51,7 +51,7 @@ class Welcome_model extends CI_Model
 		$type = explode('.', $_FILES["vid"]["name"]);
 		$type = $type[count($type)-1];
 		$link = "./assets/video/".$_FILES["vid"]["name"];
-		if(in_array($type, array("mp4", "avi")));
+		if(in_array($type, array("mp4", "avi", "flv")));
 		if(is_uploaded_file($_FILES["vid"]["tmp_name"])) {
 			$data = array(
 				'playback_content' => $_FILES["vid"]["name"],
