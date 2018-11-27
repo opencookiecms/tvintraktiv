@@ -282,5 +282,14 @@ class Welcome extends CI_Controller {
 
  	}
 
+	public function screen_dasboard()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('screen');
+		$this->load->view('template/footer');
+	}
+
+
 
 }
