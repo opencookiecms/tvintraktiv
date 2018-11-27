@@ -211,6 +211,8 @@ class Welcome extends CI_Controller {
 		$data['get_height']=$this->Welcome_model->get_settings($value);
 		$this->load->view('settings', $data);
 		$this->load->view('template/footer');
+
+		$this->Welcome_model->setSetting($data, $this->input->post('hiddenid'));
 	}
 
 	public function noticedetails()
