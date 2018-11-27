@@ -253,7 +253,7 @@ class Welcome_model extends CI_Model
     $this->load->helper('url');
     $signage_logoheight = $this->input->post('logoheight');
     $signage_mediaheight = $this->input->post('mediaheight');
-    $signage_slideheight = $this->input->post('slideheight ');
+    $signage_slideheight = $this->input->post('slideheight');
     $signage_messageheight = $this->input->post('messageheight');
     $signage_footerheight = $this->input->post('footerheight');
 		$sigange_bannerheight = $this->input->post('bannerheight');
