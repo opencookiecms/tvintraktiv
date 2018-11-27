@@ -45,12 +45,27 @@
             <div class="inner">
               <h3>2<sup style="font-size: 20px"></sup></h3>
 
-              <p>Layout 2</p>
+              <p>Layout 02</p>
             </div>
             <div class="icon">
               <i class="fas fa-film"></i>
             </div>
             <a href="<?php echo site_url('welcome/screen02/') ?>" target="_blank" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>2<sup style="font-size: 20px"></sup></h3>
+
+              <p>Layout 03</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-film"></i>
+            </div>
+            <a href="<?php echo site_url('welcome/screen03/') ?>" target="_blank" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 

@@ -107,7 +107,7 @@ myvid.play();
  <div class="row">
   <div class="col-sm-7">
     <div class=" noticebox">
-      <marquee behavior="scroll" direction="up" height="300" style="padding-left:15px; padding-right:15px;">
+      <marquee behavior="scroll" direction="up" height="500" style="padding-left:15px; padding-right:15px;">
         <?php
 
         foreach ($get_notice as $row) {
