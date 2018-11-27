@@ -170,15 +170,14 @@
                 <div class="embed-responsive embed-responsive-16by9">
 
                   <?php
-                  $i = 1;
 
                   foreach ($get_playback as $row) {
                  # code..
 
                    ?>
-                   <video width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls>
+                  <video width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
                     <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
-                    </video>
+                  </video>
 
                     <?php } ?>
 
