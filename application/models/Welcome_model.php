@@ -259,9 +259,6 @@ class Welcome_model extends CI_Model
 		$sigange_bannerheight = $this->input->post('bannerheight');
 		$signage_id = $this->input->post('hiddenid');
 
-
-
-
     $data = array(
       'logoheight' => $signage_logoheight,
       'mediaheight' => $signage_mediaheight,
