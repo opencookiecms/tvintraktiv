@@ -175,9 +175,24 @@
                  # code..
 
                    ?>
-                  <video width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
-                    <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+                  <video id="try" width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
+                    <source id="ss" src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
                   </video>
+
+                  <script>
+                    video_count = 1;
+                    videoPlayer = document.getElementById("ss");
+                    video=document.getElementById("try");
+
+                    function run() {
+                      video_count++;
+                      if (video_count == 4) video_count = 1;
+                      videoPlayer.setAttribute("src", "assets/video" +video_count+".mp4");
+                      video.play();
+                    }
+
+
+                  </script>
 
                     <?php } ?>
 
