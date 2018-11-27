@@ -30,9 +30,44 @@
 
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <div class="row">
-      <div class="col-md-7 blackbox"><iframe width="100%" height="100%"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY">
-      </iframe></div>
+      <div class="col-md-7 blackbox">
+        <div class="embed-responsive embed-responsive-16by9">
+
+
+         <video id="myvideo" width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
+          <?php
+          foreach ($get_playback as $row) { ?>
+
+<source class="<?php if($row->id==$lastvedioid){echo "active";} ?>"
+src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+
+            <?php } ?>
+
+          </video>
+
+          <script type='text/javascript'>
+
+           var myvid = document.getElementById('myvideo');
+
+           myvid.addEventListener('ended', function(e) {
+// get the active source and the next video source.
+// I set it so if there's no next, it loops to the first one
+var activesource = document.querySelector("#myvideo source.active");
+var nextsource = document.querySelector("#myvideo source.active + source") || document.querySelector("#myvideo source:first-child");
+
+// deactivate current source, and activate next one
+activesource.className = "";
+nextsource.className = "active";
+
+// update the video source and play
+myvid.src = nextsource.src;
+myvid.play();
+});
+</script>
+
+
+</div>
+    </div>
       <div class="col-md-5 imagebox">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
