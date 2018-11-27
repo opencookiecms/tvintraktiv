@@ -3,10 +3,11 @@
 <head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.css">
+  <link href="<?php echo base_url();?>assets/style/css/ourthemes.css" rel="stylesheet" type="text/css">
 </head>
 </html>
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper ps">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <center>
