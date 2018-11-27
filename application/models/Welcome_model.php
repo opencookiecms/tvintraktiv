@@ -246,5 +246,36 @@ class Welcome_model extends CI_Model
 
 	}
 
+	public function setSetting($data, $update)
+	{
+
+    $this->load->helper('url');
+    $signage_logoheight = $this->input->post('logoheight');
+    $signage_mediaheight = $this->input->post('mediaheight');
+    $signage_slideheight = $this->input->post('slideheight ');
+    $signage_messageheight = $this->input->post('messageheight');
+    $signage_footerheight = $this->input->post('footerheight');
+		$sigange_bannerheight = $this->input->post('bannerheight');
+		$signage_id = $this->input->post('hiddenid');
+
+
+
+
+    $data = array(
+      'logoheight' => $signage_logoheight,
+      'mediaheight' => $signage_mediaheight,
+      'slideheight' => $signage_slideheight,
+      'messageheight' => $signage_messageheight],
+      'bannerheight' => $sigange_bannerheight,
+      'footerheight' => $signage_footerheight,
+			'id'=> $signage_id
+
+    );
+
+    $this->db->where('id', $update);
+
+    $this->db->update('signagesetting', $data);
+	}
+
 	//
 }
