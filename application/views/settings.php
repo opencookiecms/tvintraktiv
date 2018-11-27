@@ -41,7 +41,7 @@
 
     <?php echo form_open_multipart('welcome/settings/1'); ?>
 
-    
+
 
      <div class="box box-info">
       <div class="box-header with-border">
@@ -127,7 +127,7 @@
 
 
       <div class="box-footer">
-        <button type="submit" name="submit" class="btn btn-default">Save</button>
+        <button type="submit" name="submit" class="btn btn-success">Save</button>
       </div>
     </div>
   </form>
