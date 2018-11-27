@@ -31,6 +31,9 @@
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <div class="row">
       <div class="col-md-7 blackbox">
+        <?php
+        $lastvedioid= $get_lastidv[0]->id;
+        ?>
         <div class="embed-responsive embed-responsive-16by9">
          <video id="myvideo" width="100" height="<?php echo $get_height[0]->mediaheight ?>" controls autoplay>
           <?php
