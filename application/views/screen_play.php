@@ -29,7 +29,7 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/owncss/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Abel|Patrick+Hand|Yanone+Kaffeesatz" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Roboto+Condensed|Slabo+27px" rel="stylesheet">
   
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,9 +54,9 @@
 
    * {box-sizing: border-box;}
    body {
-    font-family: 'Abel', sans-serif;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Slabo 27px', serif;
   }
   .mySlides {display: none;}
   img {vertical-align: middle;}

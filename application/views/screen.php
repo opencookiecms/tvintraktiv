@@ -58,7 +58,7 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>2<sup style="font-size: 20px"></sup></h3>
+              <h3>3<sup style="font-size: 20px"></sup></h3>
 
               <p>Layout 03</p>
             </div>
@@ -66,6 +66,21 @@
               <i class="fas fa-film"></i>
             </div>
             <a href="<?php echo site_url('welcome/screen03/') ?>" target="_blank" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-blue">
+            <div class="inner">
+              <h3>4</h3>
+
+              <p>Layout 04</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-film"></i>
+            </div>
+            <a href="<?php echo site_url('welcome/screen04/') ?>" target="_blank" class="small-box-footer">Masuk <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
