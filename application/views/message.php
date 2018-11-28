@@ -103,6 +103,7 @@
                   <td><?php echo $row->message_content?></td>
                   <td><?php echo $row->message_status?></td>
                   <td><td><a href="<?php echo site_url("welcome/deletemessage/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                  <a href="<?php echo site_url("welcome/updatemessage/" . $row->id); ?>">Update</a>
                   </td>
                 </tr>
 

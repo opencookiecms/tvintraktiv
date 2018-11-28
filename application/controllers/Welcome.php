@@ -322,6 +322,53 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	//update
+
+	public function updatebanner($value="")
+	{
+
+		$this->load->database();
+
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$data['get_banner']=$this->Welcome_model->get_bannerview($value);
+		$this->load->view('bannerupdate', $data);
+		$this->load->view('template/footer');
+
+		$this->Welcome_model->updateBanner($data, $this->input->post('hiddenid'));
+
+	}
+
+	public function updatemessage($value="")
+	{
+
+		$this->load->database();
+
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$data['get_message']=$this->Welcome_model->get_messageview($value);
+		$this->load->view('messageupdate', $data);
+		$this->load->view('template/footer');
+
+		$this->Welcome_model->updateMessage($data, $this->input->post('hiddenid'));
+
+	}
+
+	public function updatenotice($value="")
+	{
+
+		$this->load->database();
+
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$data['get_notice']=$this->Welcome_model->get_noticeview($value);
+		$this->load->view('noticeupdate', $data);
+		$this->load->view('template/footer');
+
+		$this->Welcome_model->updateNotice($data, $this->input->post('hiddenid'));
+
+	}
+
 
 
 }

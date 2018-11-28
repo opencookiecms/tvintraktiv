@@ -108,6 +108,7 @@
                   <td><?php echo $row->notice_content?></td>
                   <td><?php echo $row->notice_status?></td>
                   <td><a href="<?php echo site_url("welcome/deletenotice/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                  <a href="<?php echo site_url("welcome/updatenotice/" . $row->id); ?>">Update</a>
                   </td>
                 </tr>
 

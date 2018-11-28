@@ -263,6 +263,8 @@ class Welcome_model extends CI_Model
 
 	}
 
+	//update
+
 	public function setSetting($data, $update)
 	{
 
@@ -272,8 +274,8 @@ class Welcome_model extends CI_Model
     $signage_slideheight = $this->input->post('slideheight');
     $signage_messageheight = $this->input->post('messageheight');
     $signage_footerheight = $this->input->post('footerheight');
-		$sigange_bannerheight = $this->input->post('bannerheight');
-		$signage_id = $this->input->post('hiddenid');
+	$sigange_bannerheight = $this->input->post('bannerheight');
+	$signage_id = $this->input->post('hiddenid');
 
     $data = array(
       'logoheight' => $signage_logoheight,
@@ -291,5 +293,72 @@ class Welcome_model extends CI_Model
     $this->db->update('signagesetting', $data);
 	}
 
-	//
+	public function updateBanner($data, $update)
+	{
+
+    $this->load->helper('url');
+    $banner_title = $this->input->post('title');
+    $banner_content = $this->input->post('content');
+    $banner_status = $this->input->post('status');
+    $banner_id = $this->input->post('hiddenid');
+
+    $data = array(
+      'banner_title' => $banner_title,
+      'banner_content' => $banner_content,
+      'banner_status' => $banner_status,
+      'id'=> $banner_id
+
+    );
+
+    $this->db->where('id', $update);
+
+    $this->db->update('data_banner', $data);
+
+    }
+
+    public function updateMessage($data, $update)
+	{
+
+    $this->load->helper('url');
+    $message_title = $this->input->post('title');
+    $message_content = $this->input->post('content');
+    $message_status = $this->input->post('status');
+    $message_id = $this->input->post('hiddenid');
+
+    $data = array(
+      'message_title' => $message_title,
+      'message_content' => $message_content,
+      'message_status' => $message_status,
+      'id'=> $message_id
+
+    );
+
+    $this->db->where('id', $update);
+
+    $this->db->update('data_message', $data);
+
+    }
+
+    public function updateNotice($data, $update)
+	{
+
+    $this->load->helper('url');
+    $notice_title = $this->input->post('title');
+    $notice_content = $this->input->post('content');
+    $notice_status = $this->input->post('status');
+    $notice_id = $this->input->post('hiddenid');
+
+    $data = array(
+      'notice_title' => $notice_title,
+      'notice_content' => $notice_content,
+      'notice_status' => $notice_status,
+      'id'=> $notice_id
+
+    );
+
+    $this->db->where('id', $update);
+
+    $this->db->update('data_notice', $data);
+
+    }
 }
