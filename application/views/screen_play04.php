@@ -16,7 +16,7 @@
       </div>
       <div class="left_space logoblock">
         <div class="content paddingblocklogo">
-          logo
+          logoss
         </div>
       </div>
     </div>
