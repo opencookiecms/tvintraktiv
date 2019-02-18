@@ -19,7 +19,7 @@
 
     <div class="title jps4" style="padding-top:10px;"><img src="<?php echo base_url();?>assets/logo/jps.png">  JABATAN PENGAIRAN DAN SALIRAN KUALA MUDA \ SIK \ BALING</div>
     <div class="sidemesg noticecolorfont3">
-      <marquee behavior="scroll" direction="up" height="500" scrollamount="3" style="padding-left:15px; padding-right:15px;">
+      <marquee behavior="scroll" direction="up" height="680" scrollamount="3" style="padding-left:15px; padding-right:15px;">
         <?php
 
         foreach ($get_notice as $row) {
@@ -41,8 +41,8 @@
       <?php
       $lastvedioid= $get_lastidv[0]->id;
       ?>
-      <div class="embed-responsive embed-responsive-16by9">
-       <video id="myvideo" width="100%" height="100%" controls autoplay>
+
+       <video id="myvideo"  controls autoplay>
         <?php
         foreach ($get_playback as $row) { ?>
 
@@ -74,7 +74,7 @@
 
 
 
-</div>
+
     </div>
 
     <div class="clock" id="txt"></div>

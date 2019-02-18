@@ -91,6 +91,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('screen_play04', $data);
 	}
 
+	public function screen05()
+	{
+		$this->load->database();
+		$data['get_height']=$this->Welcome_model->get_settings();
+		$data['get_banner']=$this->Welcome_model->get_bannerview();
+		$data['get_message']=$this->Welcome_model->get_messageview();
+		$data['get_notice']= $this->Welcome_model->get_noticeview();
+		$data['get_playback']= $this->Welcome_model->get_playbackview();
+		$data['get_slide']= $this->Welcome_model->get_slideview();
+		$data['get_lastid'] = $this->Welcome_model->getLastidimages();
+		$data['get_lastidv'] = $this->Welcome_model->getLastidVedio();
+		$this->load->view('screen5', $data);
+	}
+
 	public function banner()
 	{
 		$data['title'] = 'Add New Banner';
