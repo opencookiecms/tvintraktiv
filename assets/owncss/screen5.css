@@ -1,0 +1,47 @@
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "tv-header tv-header tv-header tv-header" "tv-notice tv-notice tv-vedio tv-vedio" "tv-slide tv-slide tv-vedio tv-vedio" "tv-slide tv-slide tv-vedio tv-vedio" "tv-slide tv-slide tv-banner tv-banner" "tv-clock tv-massagebot tv-massagebot tv-massagebot";
+  grid-template-columns: 151px 88px 4fr 1fr;
+  grid-template-rows: 72px 326px 53px 20px 146px 80px;
+  justify-content: center;
+}
+
+.container > div {
+  border: 1px dashed #888;
+}
+
+.tv-header {
+  grid-area: tv-header;
+}
+
+.tv-notice {
+  grid-area: tv-notice;
+}
+
+.tv-vedio {
+  grid-area: tv-vedio;
+}
+
+.tv-slide {
+  grid-area: tv-slide;
+}
+
+.tv-banner {
+  grid-area: tv-banner;
+}
+
+.tv-clock {
+  grid-area: tv-clock;
+}
+
+.tv-massagebot {
+  grid-area: tv-massagebot;
+}
+
+.test {
+  text-align: center;
+}
+
+/*# sourceMappingURL=screen5.css.map */
