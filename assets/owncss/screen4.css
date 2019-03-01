@@ -8,10 +8,10 @@
   "sidemesg sidemesg vedios"
   "clock msgbot msgbot";
   grid-template-columns:250px 350px 1fr; /*loro colom and */
-  grid-template-rows: 116px 40px 393px 80px; logo
+  grid-template-rows: 116px 40px 393px 80px;
 }
 .containers > div {
-
+  border: #10ac84 0px solid;
 }
 
 .logo {
@@ -19,6 +19,7 @@
 	background-color: #574b90;
 	text-align: center;
 }
+
 .title {
   grid-area: title;
    background: #2c2c54;  /* fallback for old browsers */

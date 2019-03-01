@@ -77,20 +77,16 @@ class Welcome_model extends CI_Model
 		$slide_status = $this->input->post('status');
 		$slide_reg = $this->input->post('register');
 
-		$this->do_upload_image($slide_title,$slide_status,$slide_reg);
+		$this->do_upload_image_slide($slide_title,$slide_status,$slide_reg);
 
 	}
 
-	public function submit()
-	{
 
-	}
-
-	public function do_upload_image($title = null, $status = null, $reg = null)
+	public function do_upload_image_slide($title = null, $status = null, $reg = null)
 	{
 		$type = explode('.', $_FILES["pic"]["name"]);
 		$type = $type[count($type)-1];
-		$link = "./assets/images/".$_FILES["pic"]["name"];
+		$link = "./assets/images/slide/".$_FILES["pic"]["name"];
 		if(in_array($type, array("jpg", "jpeg", "gif", "png")));
 		if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
 			$data = array(
@@ -107,7 +103,6 @@ class Welcome_model extends CI_Model
 			return "";
 		}
 	}
-
 	///Saving the data///////
 	public function create_notice()
 	{
@@ -284,7 +279,7 @@ class Welcome_model extends CI_Model
       'messageheight' => $signage_messageheight,
       'bannerheight' => $sigange_bannerheight,
       'footerheight' => $signage_footerheight,
-			'id'=> $signage_id
+	  'id'=> $signage_id
 
     );
 

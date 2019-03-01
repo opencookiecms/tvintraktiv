@@ -1,19 +1,23 @@
-.container {
+.containers {
   display: grid;
   width: 100%;
   height: 100%;
   grid-template-areas: "tv-header tv-header tv-header tv-header" "tv-notice tv-notice tv-vedio tv-vedio" "tv-slide tv-slide tv-vedio tv-vedio" "tv-slide tv-slide tv-vedio tv-vedio" "tv-slide tv-slide tv-banner tv-banner" "tv-clock tv-massagebot tv-massagebot tv-massagebot";
-  grid-template-columns: 151px 88px 4fr 1fr;
-  grid-template-rows: 72px 326px 53px 20px 146px 80px;
-  justify-content: center;
+  grid-template-columns: 151px 120px 4fr 1fr;
+  grid-template-rows: 100px 326px 53px 20px 146px 75px;
+  margin: 0px;
 }
 
-.container > div {
+.containers > div {
   border: 1px dashed #888;
 }
 
 .tv-header {
   grid-area: tv-header;
+  vertical-align: middle;
+  background: #2c2c54;
+  /* fallback for old browsers */
+  opacity: 10px;
 }
 
 .tv-notice {
@@ -34,14 +38,51 @@
 
 .tv-clock {
   grid-area: tv-clock;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  font: 30px "body_font", "Helvetica Neue", Helvetica, Monospace, sans-serif bold;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .tv-massagebot {
   grid-area: tv-massagebot;
+  background-color: #273c75;
 }
 
-.test {
+.headerload {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  font: 30px "body_font", "Helvetica Neue", Helvetica, Monospace, sans-serif bold;
+  -webkit-font-smoothing: antialiased;
   text-align: center;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.logoimage {
+  width: 100px;
+}
+
+video {
+  height: 398px;
+  width: 100%;
+  object-fit: fill;
+}
+
+.spanmsgbot {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  margin-left: 300px;
+  text-align: center;
+  font: 30px "body_font", "Helvetica Neue", Helvetica, Monospace, sans-serif bold;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=screen5.css.map */

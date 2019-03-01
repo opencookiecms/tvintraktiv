@@ -7,7 +7,7 @@
 </head>
 </html>
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper ps">
+<div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <center>
@@ -25,56 +25,6 @@
       <div class="col-md-12">
 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add</button>
-
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-body">
-
-              <?php if (isset($_SESSION['success'])) { ?>
-              <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-              <?php
-            } ?>
-            <?php //echo validation_errors('<div class="alert alert-danger">', '</div'); ?>
-            <!--<form  method="POST" action="?php echo site_url('Projek/insert_stepone') ?>">-->
-
-
-
-            <h2><?php echo $title; ?></h2>
-
-            <?php echo validation_errors(); ?>
-
-            <?php echo form_open('welcome/notice'); ?>
-                  <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Title:</label>
-                    <input type="text" class="form-control" id="title" name="title">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Content:</label>
-                    <textarea class="ckeditor" name="content"></textarea>
-                    <script>
-                    CKEDITOR.replace( 'content' );
-                    </script>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="message-text" class="col-form-label">Status:</label>
-                    <select type="text" class="form-control" id="status" name="status">
-                      <option value=""></option>
-                      <option value="Show">Show</option>
-                      <option value="Not Show">Not Show</option>
-                    </select>
-                  </div>
-
-                  <button type="cancel" name="cancel" class="btn btn-default">Cancel</button>
-                  <button type="submit" name="submit" class="btn btn-default">Add</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="box">
           <div class="box-header">
             <h3 class="box-title">List of Notice Board</h3>
@@ -101,7 +51,6 @@
                  # code..
 
                  ?>
-
                  <tr>
                   <td><?php echo $row->id?></td>
                   <td><?php echo $row->notice_title?></td>
@@ -124,7 +73,7 @@
         </div>
         <!-- /.box -->
 
-      </div>
+     
       <!-- /.col -->
     </div>
 
