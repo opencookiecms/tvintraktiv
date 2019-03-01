@@ -269,8 +269,8 @@ class Welcome_model extends CI_Model
     $signage_slideheight = $this->input->post('slideheight');
     $signage_messageheight = $this->input->post('messageheight');
     $signage_footerheight = $this->input->post('footerheight');
-	$sigange_bannerheight = $this->input->post('bannerheight');
-	$signage_id = $this->input->post('hiddenid');
+	  $sigange_bannerheight = $this->input->post('bannerheight');
+	  $signage_id = $this->input->post('hiddenid');
 
     $data = array(
       'logoheight' => $signage_logoheight,
@@ -279,7 +279,7 @@ class Welcome_model extends CI_Model
       'messageheight' => $signage_messageheight,
       'bannerheight' => $sigange_bannerheight,
       'footerheight' => $signage_footerheight,
-	  'id'=> $signage_id
+	    'id'=> $signage_id
 
     );
 
