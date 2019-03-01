@@ -11,11 +11,11 @@ class Datahandler extends CI_Controller {
 		$this->load->model('Welcome_model');
         //Do your magic here
     }
-    
+
 
     public function index()
     {
-        
+
     }
 
     //view the data
@@ -29,22 +29,22 @@ class Datahandler extends CI_Controller {
 		$this->load->view('template/sidebar');
 		$this->load->view('banner', $data);
 		$this->load->view('template/footer');
-	
+
     }
 
     public function video()
-	{
+	  {
         $this->load->database();
         $data['title'] = 'Add New Playback';
         $data['get_playback']=$this->Welcome_model->get_playbackview();
 
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('video', $data);
-		$this->load->view('template/footer');
-	
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+		    $this->load->view('pages/video', $data);
+		    $this->load->view('template/footer');
+
     }
-    
+
     public function photo()
 	{
 
@@ -58,7 +58,7 @@ class Datahandler extends CI_Controller {
 		$this->load->view('template/footer');
 
     }
-    
+
     public function message()
 	{
         $this->load->database();
@@ -69,7 +69,7 @@ class Datahandler extends CI_Controller {
 		$this->load->view('template/sidebar');
 		$this->load->view('message', $data);
 		$this->load->view('template/footer');
-	
+
     }
 
     public function notice()
@@ -82,10 +82,10 @@ class Datahandler extends CI_Controller {
 		$this->load->view('template/sidebar');
 		$this->load->view('notice', $data);
 		$this->load->view('template/footer');
-	
+
 
 	}
-    
+
     public function settings($value="")
 	{
 
@@ -99,14 +99,13 @@ class Datahandler extends CI_Controller {
 
 		$this->Welcome_model->setSetting($data, $this->input->post('hiddenid'));
     }
-    
 
 
-    
+
+
 
     //end view of data
 
 }
 
 /* End of file Controllername.php */
-
