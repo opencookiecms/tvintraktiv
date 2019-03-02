@@ -16,10 +16,13 @@ class Screen extends CI_Controller {
 
     public function index()
     {
-        
+        $this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('pages/screen');
+		$this->load->view('template/footer');
     }
 
-    public function screen()
+    public function screen01()
 	{
         ///load the data to show on screen/////
 		$this->load->database();
@@ -30,7 +33,7 @@ class Screen extends CI_Controller {
  		$data['get_playback']= $this->Data_model->get_playbackview();
  		$data['get_slide']= $this->Data_model->get_slideview();
  		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
- 		$this->load->view('pages/screen_play01', $data);
+ 		$this->load->view('screen/screen_play01', $data);
 	}
 
     

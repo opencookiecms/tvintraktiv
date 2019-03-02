@@ -21,7 +21,23 @@
         </div>
     </div>
     <div class="tv-notice">
-        tv-notice
+        <div class="sidenotice">
+            <marquee behavior="scroll" direction="up"  scrollamount="3" class="slidemarque">
+                <?php
+                    foreach ($get_notice as $row) 
+                    {
+                        if ($row->notice_status == 'Show') 
+                        {
+                        echo $row->notice_content;
+                        } 
+                        else 
+                         {
+                        echo " ";
+                         }
+                    } 
+            ?>
+        </marquee>
+        </div>
     </div>
     <div class="tv-vedio">
         <?php $lastvedioid= $get_lastidv[0]->id;?>
@@ -43,7 +59,16 @@
         <div id="txt"></div>
     </div>
     <div class="tv-massagebot">
-        tv-massagebot
+        <marquee behavior="scroll"  style="margin-top:10px;">
+            <?php
+                $pre     = "<span class='spanmsgbot'>";
+                $append  = "</span>";
+                foreach ($get_message as $message_get) 
+                {
+                    echo $pre.$message_get->message_content.$append;
+                }
+            ?>
+         </marquee>
     </div>
 </div>
 <script src="<?php echo base_url()?>assets/owncss/js/v.js"></script>

@@ -2,7 +2,7 @@
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
-<div class="page-wrapper">
+<div class="page-wrapper ub">
   <!-- ============================================================== -->
   <!-- Bread crumb and right sidebar toggle -->
   <!-- ============================================================== -->
@@ -35,6 +35,8 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+          <a href="<?php echo site_url('add/slide') ?>" class="btn btn-info">Add</a>
+            <p>
             <h5 class="card-title m-b-0">List view</h5>
           </div>
 
@@ -66,7 +68,9 @@
                   <td><?php echo $row->slide_title?></td>
                   <td><img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 30%"></td>
                   <td><?php echo $row->slide_status?></td>
-                  <td><a href="<?php echo site_url("welcome/deletephoto/" . $row->id); ?>" onclick="return confirm('Are you sure?')">Delete</a>
+                  <td>
+                  <a class="btn btn-primary" href="<?php echo site_url(''); ?>" onclick="return confirm('Are you sure? There was no turning if you delete this item')">Update</a>
+                  <a class="btn btn-danger" href="<?php echo site_url(''); ?>" onclick="return confirm('Are you sure? There was no turning if you delete this item')">Delete</a>
                   </td>
                 </tr>
 

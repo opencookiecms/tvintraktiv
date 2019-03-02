@@ -19,18 +19,32 @@ class Data_model extends CI_Model
 		$this->load->helper('url');
 
 		$banner_title = $this->input->post('title');
-		$banner_content = $this->input->post('content');
 		$banner_status = $this->input->post('status');
-		$banner_reg = $this->input->post('register');
+		$banner_reg = $this->input->post('reg');
 
-		$data = array(
-			'banner_title' => $banner_title,
-			'banner_content' => $banner_content,
-			'banner_status' => $banner_status,
-			'banner_reg' => $banner_reg
-		);
+		$this->do_upload_banner($banner_title, $banner_status, $banner_reg);
+	}
 
-		return $this->db->insert('data_banner', $data);
+	public function do_upload_banner($title = null, $status = null, $reg = null)
+	{
+		$type = explode('.', $_FILES["banner"]["name"]);
+		$type = $type[count($type)-1];
+		$link = "./assets/images/".$_FILES["banner"]["name"];
+		if(in_array($type, array("jpg", "jpeg", "gif", "png")));
+		if(is_uploaded_file($_FILES["banner"]["tmp_name"])) {
+			$data = array(
+				'banner_content' => $_FILES["banner"]["name"],
+				'banner_title' => $title,
+				'banner_status' => $status,
+				'banner_reg' => $reg
+			);
+			$this->db->insert('data_banner', $data);
+			if(move_uploaded_file($_FILES["banner"]["tmp_name"], $link)) {
+				return $link;
+			}
+		} else {
+			return "";
+		}
 	}
 
 	public function create_video()
@@ -77,7 +91,7 @@ class Data_model extends CI_Model
 
 		$slide_title = $this->input->post('title');
 		$slide_status = $this->input->post('status');
-		$slide_reg = $this->input->post('register');
+		$slide_reg = $this->input->post('reg');
 
 		$this->do_upload_image_slide($slide_title,$slide_status,$slide_reg);
 
@@ -88,7 +102,7 @@ class Data_model extends CI_Model
 	{
 		$type = explode('.', $_FILES["pic"]["name"]);
 		$type = $type[count($type)-1];
-		$link = "./assets/images/slide/".$_FILES["pic"]["name"];
+		$link = "./assets/images/".$_FILES["pic"]["name"];
 		if(in_array($type, array("jpg", "jpeg", "gif", "png")));
 		if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
 			$data = array(
@@ -105,13 +119,15 @@ class Data_model extends CI_Model
 			return "";
 		}
 	}
+
+	
 	///Saving the data///////
 	public function create_notice()
 	{
 		$this->load->helper('url');
 
 		$notice_title = $this->input->post('title');
-		$notice_content = $this->input->post('content');
+		$notice_content = $this->input->post('notice');
 		$notice_status = $this->input->post('status');
 		$notice_reg = $this->input->post('register');
 
@@ -130,7 +146,7 @@ class Data_model extends CI_Model
 		$this->load->helper('url');
 
 		$message_title = $this->input->post('title');
-		$message_content = $this->input->post('content');
+		$message_content = $this->input->post('message');
 		$message_status = $this->input->post('status');
 		$message_reg = $this->input->post('register');
 

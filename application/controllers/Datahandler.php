@@ -123,4 +123,95 @@ class Datahandler extends CI_Controller {
 
 		}
 	}
+
+	public function addSlide()
+	{
+		$this->form_validation->set_rules('title','Title are require','required');
+
+		$this->load->database();
+
+		if($this->form_validation->run() === FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/slide_add');
+			$this->load->view('template/footer');
+		}
+	
+		else
+		{
+			$this->Data_model->create_slide();
+			redirect(base_url('config/photo'));
+
+		}
+	}
+
+	public function addBanner()
+	{
+		$this->form_validation->set_rules('title','Title are require','required');
+
+		$this->load->database();
+
+		if($this->form_validation->run() === FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/banner_add');
+			$this->load->view('template/footer');
+		}
+	
+		else
+		{
+			$this->Data_model->create_banner();
+			redirect(base_url('config/banner'));
+
+		}
+	}
+
+	public function addMessage()
+	{
+		$this->form_validation->set_rules('title','Title are require','required');
+
+		$this->load->database();
+
+		if($this->form_validation->run() === FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/message_add');
+			$this->load->view('template/footer');
+		}
+	
+		else
+		{
+			$this->Data_model->create_message();
+			redirect(base_url('config/message'));
+
+		}
+	}
+	public function addNotice()
+	{
+		$this->form_validation->set_rules('title','Title are require','required');
+
+		$this->load->database();
+
+		if($this->form_validation->run() === FALSE)
+
+		{
+			$this->load->view('template/header');
+			$this->load->view('template/sidebar');
+			$this->load->view('pages/notice_add');
+			$this->load->view('template/footer');
+		}
+	
+		else
+		{
+			$this->Data_model->create_notice();
+			redirect(base_url('config/notice'));
+
+		}
+	}
 }

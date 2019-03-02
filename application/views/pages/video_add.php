@@ -8,7 +8,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Form Basic</h4>
+                        <h4 class="page-title">Video</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -37,7 +37,7 @@
                       
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Adding Vedio</h5>
+                                <h5 class="card-title">Add New Vedio</h5>
                                 <div class="form-group row">
                                     <label class="col-md-3">Title</label>
                                     <div class="col-md-9">

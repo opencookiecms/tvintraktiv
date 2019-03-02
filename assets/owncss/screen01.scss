@@ -29,6 +29,7 @@
 }
 .tv-notice {
   grid-area: tv-notice;
+  background-color: #10ac84;
 }
 .tv-vedio {
   grid-area: tv-vedio;
@@ -91,4 +92,16 @@ video{
   margin-bottom: 15px;
   text-transform: uppercase;
 
+}
+
+.sidenotice{
+  display: inline-block;
+  height: 350px;
+  color: white;
+}
+
+.slidemarque{
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 300px;
 }

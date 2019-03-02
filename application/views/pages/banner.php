@@ -2,14 +2,14 @@
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
-<div class="page-wrapper">
+<div class="page-wrapper ub">
   <!-- ============================================================== -->
   <!-- Bread crumb and right sidebar toggle -->
   <!-- ============================================================== -->
   <div class="page-breadcrumb">
     <div class="row">
       <div class="col-12 d-flex no-block align-items-center">
-        <h4 class="page-title">Video List</h4>
+        <h4 class="page-title">Banner</h4>
         <div class="ml-auto text-right">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -35,17 +35,19 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+          <a href="<?php echo site_url('add/banner') ?>" class="btn btn-info">Add</a>
+            <p>
             <h5 class="card-title m-b-0">List view</h5>
           </div>
 
           <table id="example1" class="table">
-              <thead>
+              <thead class="thead-dark">
                 <tr>
                   <th>No</th>
                   <th>Title</th>
-                  <th>Content</th>
+                  <th style="width:50%;">Content</th>
                   <th>Status</th>
-                  <th></th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
@@ -61,10 +63,11 @@
                  <tr>
                   <td><?php echo $row->id?></td>
                   <td><?php echo $row->banner_title?></td>
-                  <td><?php echo $row->banner_content?></td>
+                  <td><img src="<?php echo site_url("/assets/images/")?><?php echo $row->banner_content?>" style="width: 30%"></td>
                   <td><?php echo $row->banner_status?></td>
-                  <td><a href="<?php echo site_url("welcome/deletebanner/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
-                  <a href="<?php echo site_url("welcome/updatebanner/" . $row->id); ?>">Update</a>
+                  <td>
+                  <a class = "btn btn-primary" href="<?php echo site_url("welcome/deletebanner/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Update</a>
+                  <a class = "btn btn-danger" href="<?php echo site_url("welcome/updatebanner/" . $row->id); ?>">Update</a>
 
                   </td>
                 </tr>
