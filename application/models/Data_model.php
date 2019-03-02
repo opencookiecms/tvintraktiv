@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
 *
 */
-class Welcome_model extends CI_Model
+class Data_model extends CI_Model
 {
 
 	public function __construct()
@@ -38,29 +38,31 @@ class Welcome_model extends CI_Model
 		$this->load->helper('url');
 
 		$playback_title = $this->input->post('title');
+		$playback_content = $this->input->post('content');
 		$playback_status = $this->input->post('status');
 		$playback_reg = $this->input->post('register');
 
-		$this->do_upload_video($playback_title,$playback_status,$playback_reg);
+		$this->do_upload_video($playback_title, $playback_content, $playback_status, $playback_reg);
 
 	}
 
-	public function do_upload_video($title = null, $status = null, $reg = null)
+	public function do_upload_video($title = null, $content=null, $status = null, $reg = null)
 	{
 
-		$type = explode('.', $_FILES["vid"]["name"]);
+		$type = explode('.', $_FILES["video"]["name"]);
 		$type = $type[count($type)-1];
-		$link = "./assets/video/".$_FILES["vid"]["name"];
-		if(in_array($type, array("mp4", "avi", "flv")));
-		if(is_uploaded_file($_FILES["vid"]["tmp_name"])) {
+		$link = "./assets/video/".$_FILES["video"]["name"];
+		if(in_array($type, array("mp4", "avi", "flv","mp3")));
+		if(is_uploaded_file($_FILES["video"]["tmp_name"])) {
 			$data = array(
-				'playback_content' => $_FILES["vid"]["name"],
+				'playback_video' => $_FILES["video"]["name"],
 				'playback_title' => $title,
+				'playback_content' =>$content,
 				'playback_status' => $status,
 				'playback_reg' => $reg
 			);
 			$this->db->insert('data_playback', $data);
-			if(move_uploaded_file($_FILES["vid"]["tmp_name"], $link)) {
+			if(move_uploaded_file($_FILES["video"]["tmp_name"], $link)) {
 				return $link;
 			}
 		} else {

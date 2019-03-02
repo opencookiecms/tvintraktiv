@@ -35,17 +35,20 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+            
+            <a href="<?php echo site_url('add/video') ?>" class="btn btn-info">Add</a>
+            <p>
             <h5 class="card-title m-b-0">List view</h5>
           </div>
 
-          <table id="example1" class="table table-bordered">
-            <thead>
+          <table id="example1" class="table">
+            <thead class="thead-dark">
               <tr>
                 <th>No</th>
                 <th>Title</th>
                 <th>Content</th>
                 <th>Status</th>
-                <th></th>
+                <th>Action</th>
               </tr>
             </thead>
 
@@ -61,11 +64,13 @@
                 <tr>
                   <td><?php echo $row->id?></td>
                   <td><?php echo $row->playback_title?></td>
-                  <td><center><video width="300" height="300" controls>
-                    <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+                  <td><center><video width="250" height="150" controls>
+                    <source src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_video?>" type="video/mp4">
                     </video></center></td>
                     <td><?php echo $row->playback_status?></td>
-                    <td><a href="<?php echo site_url("welcome/deletevideo/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                    <td>
+                    <a class="btn btn-primary" href="<?php echo site_url("Datahandler/updateVideo/" . $row->id); ?>" onclick="return confirm('Are you sure what to update the data')">Update</a>
+                    <a class="btn btn-danger" href="<?php echo site_url("Datahandler/deleteVideo/" . $row->id); ?>" onclick="return confirm('There is no turning back after you delete this item, Are you sure?')">Delete</a>
                     </td>
                   </tr>
 

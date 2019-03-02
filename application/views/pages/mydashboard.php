@@ -1,7 +1,7 @@
 
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
-        <div class="page-wrapper">
+        <div class="page-wrapper ub">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -33,47 +33,57 @@
                 <div class="row">
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
+                        <a href="<?php echo site_url('config/video')?>" target="_blank">
                         <div class="card card-hover">
                             <div class="box bg-cyan text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
                                 <h6 class="text-white">Video Playback</h6>
                             </div>
                         </div>
+                        </a>
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
+                        <a href="<?php echo site_url('config/notice')?>" target="_blank">
                         <div class="card card-hover">
                             <div class="box bg-success text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
                                 <h6 class="text-white">Notice</h6>
                             </div>
                         </div>
+                        </a>
                     </div>
                      <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <div class="card card-hover">
+                         <a href="<?php echo site_url('config/message')?>" target="_blank">
                             <div class="box bg-warning text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
                                 <h6 class="text-white">Message</h6>
                             </div>
+                          </a>
                         </div>
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <div class="card card-hover">
+                        <a href="<?php echo site_url('config/photo')?>" target="_blank">
                             <div class="box bg-danger text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
                                 <h6 class="text-white">Slide Photos</h6>
                             </div>
+                        </a>
                         </div>
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <div class="card card-hover">
+                        <a href="<?php echo site_url('config/banner')?>" target="_blank">
                             <div class="box bg-info text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
                                 <h6 class="text-white">Banner</h6>
                             </div>
+                        </a>
                         </div>
                     </div>
                     <!-- Column -->
