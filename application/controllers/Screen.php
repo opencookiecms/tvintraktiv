@@ -32,7 +32,9 @@ class Screen extends CI_Controller {
  		$data['get_notice']= $this->Data_model->get_noticeview();
  		$data['get_playback']= $this->Data_model->get_playbackview();
  		$data['get_slide']= $this->Data_model->get_slideview();
- 		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
+		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
+		$data['get_lastid'] = $this->Data_model->getLastidimages();
+		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
  		$this->load->view('screen/screen_play01', $data);
 	}
 

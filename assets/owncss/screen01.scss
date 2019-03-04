@@ -11,7 +11,7 @@
   "tv-slide tv-slide tv-vedio tv-vedio"
   "tv-slide tv-slide tv-banner tv-banner"
   "tv-clock tv-massagebot tv-massagebot tv-massagebot";
-  grid-template-columns: 151px 120px 4fr 1fr;
+  grid-template-columns: $tvnotice 120px 4fr 1fr;
   grid-template-rows: $tvheader $tvvideo 53px 20px 146px $tvclock;
   margin: 0px;
  
@@ -104,4 +104,15 @@ video{
   padding-left: 12px;
   padding-right: 12px;
   height: 300px;
+}
+
+.imgcrs{
+  height: 215px;
+  width: 300px;
+}
+
+.crsize{
+  width: $tvnotice;
+  height: 215px;
+
 }

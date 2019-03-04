@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   grid-template-areas: "tv-header tv-header tv-header tv-header" "tv-notice tv-notice tv-vedio tv-vedio" "tv-slide tv-slide tv-vedio tv-vedio" "tv-slide tv-slide tv-vedio tv-vedio" "tv-slide tv-slide tv-banner tv-banner" "tv-clock tv-massagebot tv-massagebot tv-massagebot";
-  grid-template-columns: 151px 120px 4fr 1fr;
+  grid-template-columns: 160px 120px 4fr 1fr;
   grid-template-rows: 100px 326px 53px 20px 146px 75px;
   margin: 0px;
 }
@@ -96,6 +96,16 @@ video {
   padding-left: 12px;
   padding-right: 12px;
   height: 300px;
+}
+
+.imgcrs {
+  height: 215px;
+  width: 300px;
+}
+
+.crsize {
+  width: 160px;
+  height: 215px;
 }
 
 /*# sourceMappingURL=screen01.css.map */

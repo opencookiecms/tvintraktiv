@@ -50,7 +50,18 @@
         
     </div>
     <div class="tv-slide">
-        tv-slide
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner crsize">
+                <?php $lastid =  $get_lastid[0]->id;?>
+                    <?php foreach ($get_slide as $row) {?>
+                    <div class="carousel-item <?php if($row->id==$lastid){echo "active";} ?> ">
+                        <img class="imgcrs" src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>">
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+
     </div>
     <div class="tv-banner">
         tv-banner
