@@ -64,7 +64,9 @@
 
     </div>
     <div class="tv-banner">
-        tv-banner
+        <div class="thisbanner" id="thisbanner">
+            <h5>Banner</h5>
+        </div>
     </div>
     <div class="tv-clock">
         <div id="txt"></div>

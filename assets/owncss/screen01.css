@@ -9,7 +9,7 @@
 }
 
 .containers > div {
-  border: 1px dashed #888;
+  border: 0px dashed #888;
 }
 
 .tv-header {
@@ -35,6 +35,7 @@
 
 .tv-banner {
   grid-area: tv-banner;
+  background-color: #686de0;
 }
 
 .tv-clock {
@@ -106,6 +107,17 @@ video {
 .crsize {
   width: 160px;
   height: 215px;
+}
+
+.thisbanner h5 {
+  color: white;
+  font-size: 80px;
+  font: 30px "body_font", "Helvetica Neue", Helvetica, Monospace, sans-serif bold;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=screen01.css.map */
