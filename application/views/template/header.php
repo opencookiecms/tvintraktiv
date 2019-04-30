@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url()?>assets/matrix/pre/images/favicon.png">
-    <title>Matrix Template - The Ultimate Multipurpose admin template</title>
+    <title>Tv Intra</title>
     <!-- Custom CSS -->
     <link href="<?php echo base_url()?>assets/matrix/pre/libs/flot/css/float-chart.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -63,7 +63,7 @@
                          <!-- Logo text -->
                         <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="<?php echo base_url()?>assets/matrix/pre/images/logo-text.png" alt="homepage" class="light-logo" />
+                             TV Intra (Beta)
 
                         </span>
                         <!-- Logo icon -->

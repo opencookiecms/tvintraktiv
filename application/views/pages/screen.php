@@ -44,11 +44,11 @@
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
-                        <a href="<?php echo site_url('config/notice')?>">
+                        <a href="<?php echo site_url('screen/screen02')?>" target="_blank">
                         <div class="card card-hover">
                             <div class="box bg-success text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-fullscreen"></i></h1>
-                                <h6 class="text-white">Notice</h6>
+                                <h6 class="text-white">Screen 02</h6>
                             </div>
                         </div>
                         </a>
@@ -56,10 +56,10 @@
                      <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <div class="card card-hover">
-                         <a href="<?php echo site_url('config/message')?>">
+                         <a href="<?php echo site_url('screen/screen03')?>" target="_blank">
                             <div class="box bg-warning text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-fullscreen"></i></h1>
-                                <h6 class="text-white">Message</h6>
+                                <h6 class="text-white">Screen 03</h6>
                             </div>
                           </a>
                         </div>
@@ -67,10 +67,10 @@
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <div class="card card-hover">
-                        <a href="<?php echo site_url('config/photo')?>">
+                        <a href="<?php echo site_url('screen//screen04')?>" target="_blank">
                             <div class="box bg-danger text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-fullscreen"></i></h1>
-                                <h6 class="text-white">Slide Photos</h6>
+                                <h6 class="text-white">Screen 04</h6>
                             </div>
                         </a>
                         </div>
@@ -78,10 +78,10 @@
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <div class="card card-hover">
-                        <a href="<?php echo site_url('config/banner')?>">
+                        <a href="<?php echo site_url('screen/screen05')?>" target="_blank">
                             <div class="box bg-info text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-fullscreen"></i></h1>
-                                <h6 class="text-white">Banner</h6>
+                                <h6 class="text-white">Screen 05</h6>
                             </div>
                         </a>
                         </div>
