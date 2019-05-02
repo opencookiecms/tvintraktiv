@@ -84,7 +84,7 @@ class Screen extends CI_Controller {
 		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
 		$data['get_lastid'] = $this->Data_model->getLastidimages();
 		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
- 		$this->load->view('screen/screen_play01', $data);
+ 		$this->load->view('screen/screen_play04', $data);
 	}
 
 	public function screen05()

@@ -11,13 +11,13 @@
 
     <link href="<?php echo base_url();?>assets/owncss/block.css" rel="stylesheet" type="text/css">
   <script src="<?php echo base_url();?>assets/style/js/bootstrap.min.css"></script>
-  <title>Screen cast 04</title>
+  <title>Screen-02</title>
 </head>
 
 <body onload="startTime()">
   <div class="containers">
 
-    <div class="title jps4" style="padding-top:10px;"><img src="<?php echo base_url();?>assets/logo/jps.png">  JABATAN PENGAIRAN DAN SALIRAN KUALA MUDA \ SIK \ BALING</div>
+    <div class="title jps4" style="padding-top:10px;"><img src="<?php echo base_url();?>assets/logo/jps.png"/>  JABATAN PENGAIRAN DAN SALIRAN KUALA MUDA \ SIK \ BALING</div>
     <div class="sidemesg noticecolorfont3">
       <marquee behavior="scroll" direction="up" height="750" scrollamount="3" style="padding-left:15px; padding-right:15px;">
         <?php

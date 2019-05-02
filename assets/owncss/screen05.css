@@ -1,0 +1,107 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr 2fr 1fr 1fr 1fr 2.5fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 1.8fr 1fr 1fr 2.4fr 0.4fr 0.4fr;
+    grid-template-areas: "l top top top top top top r" "l logodanjps logodanjps logodanjps logodanjps logodanjps logodanjps r" "l youtube youtube youtube youtube youtube noticeboard r" "l youtube youtube youtube youtube youtube noticeboard r" "l youtube youtube youtube youtube youtube noticeboard r" "l slideimage slideimage cuaca cuaca cuaca noticeboard r" "l clock messagebot messagebot messagebot messagebot messagebot r" "l b b b b b b r";
+
+    background: #DAE2F8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+  }
+  
+  .top { grid-area: top; }
+  
+  .l { grid-area: l; }
+  
+  .r { grid-area: r; }
+  
+  .b { grid-area: b; }
+  
+  .logodanjps { 
+    grid-area: logodanjps; 
+    background-color:#D6A4A4;
+
+  }
+  
+  .youtube { grid-area: youtube; }
+  
+  .noticeboard { 
+    grid-area: noticeboard; 
+  }
+  
+  .clock { grid-area: clock; }
+  
+  .messagebot { grid-area: messagebot; }
+  
+  .cuaca { 
+    grid-area: cuaca; 
+    padding-top:45px;
+    background-color:#1f567c;
+  }
+  
+  .slideimage { grid-area: slideimage; }
+
+  .thenotis{
+    background-color: #34495e;
+    color:#f5f6fa;
+    height:100%;
+  }
+
+  .msgbot{
+    background-color:#4b6584;
+    color: #f5f6fa;
+    font-weight: 900;
+  }
+
+  .jam{
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
+    text-align: center;
+    height: 100%;
+    padding-top:10px;
+  }
+
+  .jpstitle{
+    font-weight: bold;
+  
+    color: white;
+    font-size: 30px;
+    font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .jpslogo{
+    width: 150px;
+  }
+
+  .spantestss
+{
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  margin-left: 300px;
+  text-align: center;
+  font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
+  -webkit-font-smoothing: antialiased;
+
+  text-transform: uppercase;
+
+}
+
+.imgcrs {
+  height: 500px;
+  width: 100%;
+}
+
+.crsize {
+  width: 100%;
+  height: 300px;
+}
+
