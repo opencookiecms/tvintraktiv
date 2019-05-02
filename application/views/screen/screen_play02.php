@@ -19,7 +19,7 @@
 
     <div class="title jps4" style="padding-top:10px;"><img src="<?php echo base_url();?>assets/logo/jps.png">  JABATAN PENGAIRAN DAN SALIRAN KUALA MUDA \ SIK \ BALING</div>
     <div class="sidemesg noticecolorfont3">
-      <marquee behavior="scroll" direction="up" height="800" scrollamount="3" style="padding-left:15px; padding-right:15px;">
+      <marquee behavior="scroll" direction="up" height="750" scrollamount="3" style="padding-left:15px; padding-right:15px;">
         <?php
 
         foreach ($get_notice as $row) {
@@ -79,7 +79,7 @@
 
     <div class="clock" id="txt"></div>
     <div class="msgbot">
-      <marquee behavior="scroll" height="<?php echo $get_height[0]->bannerheight ?>" style="margin-top:10px;">
+      <marquee behavior="scroll" height="50" style="margin-top:10px;">
         <?php
         $pre     = "<span class='spantestss'>";
         $append  = "</span>";

@@ -8,7 +8,7 @@
   "sidemesg sidemesg vedios"
   "clock msgbot msgbot";
   grid-template-columns:250px 450px 1fr; /*loro colom and */
-  grid-template-rows: 120px 40px 820px 80px; logo
+  grid-template-rows: 120px 65px 735px 80px; logo
 }
 .containers > div {
 
@@ -23,7 +23,7 @@
   grid-area: title;
    background: #2c2c54;  /* fallback for old browsers */
 		opacity: 10px;
-		margin-top:25px;
+		
 }
 .sidemesg {
   grid-area: sidemesg;
@@ -102,7 +102,7 @@
   text-align: center;
   font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 15px;
+
   text-transform: uppercase;
 
 }
@@ -110,7 +110,7 @@
 
 
 video {
-  height: 860px;
+  height: 800px;
   width: 100%;
   object-fit: fill;
 
