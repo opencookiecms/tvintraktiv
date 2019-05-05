@@ -69,8 +69,7 @@
                     </video></center></td>
                     <td><?php echo $row->playback_status?></td>
                     <td>
-                    <a class="btn btn-primary" href="<?php echo site_url("Datahandler/updateVideo/" . $row->id); ?>" onclick="return confirm('Are you sure what to update the data')">Update</a>
-                    <a class="btn btn-danger" href="<?php echo site_url("Datahandler/deleteVideo/" . $row->id); ?>" onclick="return confirm('There is no turning back after you delete this item, Are you sure?')">Delete</a>
+                    <a class="btn btn-danger" href="<?php echo site_url("Datahandler/vedio_delete/" . $row->id); ?>" onclick="return confirm('There is no turning back after you delete this item, Are you sure?')">Delete</a>
                     </td>
                   </tr>
 

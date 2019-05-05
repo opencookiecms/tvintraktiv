@@ -55,12 +55,14 @@ $route['config/banner'] = 'Datahandler/banner';
 $route['config/photo'] = 'Datahandler/photo';
 $route['config/video'] = 'Datahandler/video';
 $route['config/notice'] = 'Datahandler/notice';
+$route['config/youtube'] = 'Datahandler/youtube';
 
 $route['add/video'] = 'Datahandler/addVideo';
 $route['add/banner'] = 'Datahandler/addBanner';
 $route['add/notice'] = 'Datahandler/addNotice';
 $route['add/message'] = 'Datahandler/addMessage';
 $route['add/slide'] = 'Datahandler/addSlide';
+$route['add/youtube']= 'Datahandler/addYoutube';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

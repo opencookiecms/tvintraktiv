@@ -69,8 +69,7 @@
                   <td><img src="<?php echo site_url("/assets/images/")?><?php echo $row->slide_content?>" style="width: 30%"></td>
                   <td><?php echo $row->slide_status?></td>
                   <td>
-                  <a class="btn btn-primary" href="<?php echo site_url(''); ?>" onclick="return confirm('Are you sure? There was no turning if you delete this item')">Update</a>
-                  <a class="btn btn-danger" href="<?php echo site_url(''); ?>" onclick="return confirm('Are you sure? There was no turning if you delete this item')">Delete</a>
+                  <a class="btn btn-danger" href="<?php echo site_url("datahandler/slide_delete/". $row->id); ?>" onclick="return confirm('Are you sure? There was no turning if you delete this item')">Delete</a>
                   </td>
                 </tr>
 

@@ -43,6 +43,18 @@
                         </a>
                     </div>
                     <!-- Column -->
+                          <!-- Column -->
+                          <div class="col-md-6 col-lg-3 col-xlg-3">
+                        <a href="<?php echo site_url('config/youtube')?>">
+                        <div class="card card-hover">
+                            <div class="box bg-cyan text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
+                                <h6 class="text-white">Youtube Vedio</h6>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <a href="<?php echo site_url('config/notice')?>">
                         <div class="card card-hover">

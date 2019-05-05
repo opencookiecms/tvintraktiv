@@ -26,11 +26,51 @@
 
   </div>
   <div class="youtube">
-  <iframe width="100%" height="100%"
-        src="https://www.youtube.com/embed/2JImBb9YLdg=1"frameborder="0" 
-        allowfullscreen>
-  </iframe>
-  </div>
+  <div class="" id="video-placeholder"></div>
+<script src="https://www.youtube.com/iframe_api"></script>
+</div>
+
+
+<script type='text/javascript'>
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-placeholder', {
+        width:'100%',
+        height: '100%',
+        videoId: '<?php echo $get_lastidyoutube[0]->content ?>',
+        playerVars: {
+            color: 'white',
+            autoplay:'1',
+            enablejsapi:'1',
+            playlist: '<?php foreach ($get_youtube as $row) { ?> <?php echo $row->content.",";?><?php } ?>'
+        },
+        events: {
+            onReady: initialize
+        }
+    });
+}
+
+function initialize(){
+
+    // Update the controls on load
+    updateTimerDisplay();
+    updateProgressBar();
+
+    // Clear any old interval.
+    clearInterval(time_update_interval);
+
+    // Start interval to update elapsed time display and
+    // the elapsed part of the progress bar every second.
+    time_update_interval = setInterval(function () {
+        updateTimerDisplay();
+        updateProgressBar();
+    }, 1000)
+
+}
+</script>
+
+
   <div class="noticeboard">
     <div class="thenotis">
         <marquee behavior="scroll" direction="up" height="100%" scrollamount="3" style="padding-left:15px; padding-right:15px;">
@@ -53,6 +93,7 @@
 
       </div>
   </div>
+
   <div class="messagebot">
       <div class="msgbot">
       <marquee behavior="scroll" height="50" style="margin-top:10px;">

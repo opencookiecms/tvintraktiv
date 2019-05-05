@@ -200,11 +200,56 @@ class Data_model extends CI_Model
 
 	}
 
+	public function get_youtubeview()
+	{
+		$this->db->select('*');
+		$this->db->from('data_youtube');
+		$this->db->order_by('id','DESC');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
+	public function get_youtubeviewbyid($value)
+	{
+		$this->db->select('*');
+		$this->db->from('data_youtube');
+		$this->db->where('id',$value);
+
+		$result = $this->db->get();
+		return $result->result();
+	}
+
+
+	public function get_noticeviewbyid($value)
+	{
+
+
+		$this->db->select('*');
+		$this->db->from('data_notice');
+		$this->db->where('id',$value);
+
+		$query = $this->db->get();
+		return $query->result();
+
+
+	}
+
 	public function get_messageview()
 	{
 
 		$this->db->select('*');
 		$this->db->from('data_message');
+
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	public function get_messageviewbyid($value)
+	{
+
+		$this->db->select('*');
+		$this->db->from('data_message');
+		$this->db->where('id',$value);
 
 		$query = $this->db->get();
 		return $query->result();
@@ -276,6 +321,22 @@ class Data_model extends CI_Model
 
 	}
 
+
+	public function getLastidyoutube()
+	{
+
+
+			$this->db->select('id,content');
+			$this->db->from('data_youtube');
+			$this->db->order_by('id','ASC');
+			$this->db->limit(1);
+
+			$query = $this->db->get();
+
+			return $query->result();
+
+	}
+
 	//update
 
 	public function setSetting($data, $update)
@@ -329,12 +390,12 @@ class Data_model extends CI_Model
 
     }
 
-    public function updateMessage($data, $update)
+  public function updateMessage($id)
 	{
 
     $this->load->helper('url');
     $message_title = $this->input->post('title');
-    $message_content = $this->input->post('content');
+    $message_content = $this->input->post('message');
     $message_status = $this->input->post('status');
     $message_id = $this->input->post('hiddenid');
 
@@ -346,18 +407,18 @@ class Data_model extends CI_Model
 
     );
 
-    $this->db->where('id', $update);
+    $this->db->where('id', $id);
 
     $this->db->update('data_message', $data);
 
     }
 
-    public function updateNotice($data, $update)
+  public function updateNotice($id)
 	{
 
     $this->load->helper('url');
     $notice_title = $this->input->post('title');
-    $notice_content = $this->input->post('content');
+    $notice_content = $this->input->post('notice');
     $notice_status = $this->input->post('status');
     $notice_id = $this->input->post('hiddenid');
 
@@ -369,9 +430,50 @@ class Data_model extends CI_Model
 
     );
 
-    $this->db->where('id', $update);
+    $this->db->where('id', $id);
 
     $this->db->update('data_notice', $data);
 
-    }
+		}
+		
+
+	public function create_youtube()
+	{
+		$this->load->helper('url');
+
+		$youtube_title = $this->input->post('title');
+		$youtube_content = $this->input->post('youtube');
+		$youtube_status = $this->input->post('status');
+
+
+		$data = array(
+			'title' => $youtube_title,
+			'content' => $youtube_content,
+			'status' => $youtube_status
+		);
+
+		return $this->db->insert('data_youtube', $data);
+	}
+
+
+	public function updateYoutube($id)
+	{
+		$this->load->helper('url');
+    $youtube_title = $this->input->post('title');
+    $youtube_content = $this->input->post('youtube');
+    $youtube_status = $this->input->post('status');
+    $youtube_id = $this->input->post('hiddenid');
+
+    $data = array(
+      'title' => $youtube_title,
+      'content' => $youtube_content,
+      'status' => $youtube_status,
+      'id'=> $youtube_id
+
+    );
+
+    $this->db->where('id', $id);
+
+    $this->db->update('data_youtube', $data);
+	}
 }

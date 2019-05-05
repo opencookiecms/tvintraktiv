@@ -32,7 +32,7 @@
     <?php
     foreach ($get_playback as $row) { ?>
 
-     <source class="<?php if($row->id==$lastvedioid){echo "active";} ?>"src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_content?>" type="video/mp4">
+     <source class="<?php if($row->id==$lastvedioid){echo "active";} ?>"src="<?php echo base_url("/assets/video/")?><?php echo $row->playback_video?>" type="video/mp4">
 
       <?php } ?>
 

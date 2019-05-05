@@ -66,8 +66,8 @@
                   <td><img src="<?php echo site_url("/assets/images/")?><?php echo $row->banner_content?>" style="width: 30%"></td>
                   <td><?php echo $row->banner_status?></td>
                   <td>
-                  <a class = "btn btn-primary" href="<?php echo site_url("welcome/deletebanner/" . $row->id); ?>" onclick="return confirm('Delete Data?')">Update</a>
-                  <a class = "btn btn-danger" href="<?php echo site_url("welcome/updatebanner/" . $row->id); ?>">Update</a>
+                  <a class = "btn btn-primary" href="<?php echo site_url("datahandler/delete_banner/" . $row->id); ?>" onclick="return confirm('Delete Data?')">delete</a>
+         
 
                   </td>
                 </tr>

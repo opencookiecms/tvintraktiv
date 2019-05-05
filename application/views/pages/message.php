@@ -65,7 +65,10 @@
                   <td><?php echo $row->message_title?></td>
                   <td><?php echo $row->message_content?></td>
                   <td><?php echo $row->message_status?></td>
-                  <td>update</td>
+                  <td>
+                  <a class="btn btn-primary" href="<?php echo site_url("datahandler/message_delete/". $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                  <a class="btn btn-danger" href="<?php echo site_url("datahandler/loademessage/" . $row->id); ?>">Update</a>
+                  </td>
                 </tr>
 
 

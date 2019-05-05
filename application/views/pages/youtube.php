@@ -9,7 +9,7 @@
   <div class="page-breadcrumb">
     <div class="row">
       <div class="col-12 d-flex no-block align-items-center">
-        <h4 class="page-title">Notice</h4>
+        <h4 class="page-title">Youtube Vedio</h4>
         <div class="ml-auto text-right">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -35,7 +35,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-          <a href="<?php echo site_url('add/notice') ?>" class="btn btn-info">Add</a>
+          <a href="<?php echo site_url('add/youtube') ?>" class="btn btn-info">Add</a>
             <p>
             <h5 class="card-title m-b-0">List view</h5>
           </div>
@@ -47,7 +47,7 @@
                 <tr>
                   <th>No</th>
                   <th>Title</th>
-                  <th style="width:55%">Content</th>
+                  <th style="width:55%">Youtube Link</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -57,18 +57,18 @@
                <?php
                $i = 1;
 
-               foreach ($get_notice as $row) {
+               foreach ($get_youtube as $row) {
                  # code..
 
                  ?>
                  <tr>
                   <td><?php echo $row->id?></td>
-                  <td><?php echo $row->notice_title?></td>
-                  <td><?php echo $row->notice_content?></td>
-                  <td><?php echo $row->notice_status?></td>
+                  <td><?php echo $row->title?></td>
+                  <td><?php echo $row->content?></td>
+                  <td><?php echo $row->status?></td>
                   <td>
-                  <a class="btn btn-primary" href="<?php echo site_url("datahandler/notice_delete/". $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
-                  <a class="btn btn-danger" href="<?php echo site_url("datahandler/loadenotice/" . $row->id); ?>">Update</a>
+                  <a class="btn btn-primary" href="<?php echo site_url("datahandler/delete_youtube/". $row->id); ?>" onclick="return confirm('Delete Data?')">Delete</a>
+                  <a class="btn btn-danger" href="<?php echo site_url("datahandler/loadyoutube/" . $row->id); ?>">Update</a>
                   </td>
                 </tr>
 
