@@ -101,44 +101,10 @@ class Screen extends CI_Controller {
 		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
 		$data['get_lastid'] = $this->Data_model->getLastidimages();
 		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
- 		$this->load->view('screen/screen_play01', $data);
-	}
-
-	public function screen06()
-	{
-        ///load the data to show on screen/////
-		$this->load->database();
-		$data['get_height']=$this->Data_model->get_settings();
- 		$data['get_banner']=$this->Data_model->get_bannerview();
- 		$data['get_message']=$this->Data_model->get_messageview();
- 		$data['get_notice']= $this->Data_model->get_noticeview();
- 		$data['get_playback']= $this->Data_model->get_playbackview();
- 		$data['get_slide']= $this->Data_model->get_slideview();
-		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
-		$data['get_lastid'] = $this->Data_model->getLastidimages();
-		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
- 		$this->load->view('screen/screen_play01', $data);
-	}
-
-	public function screen07()
-	{
-        ///load the data to show on screen/////
-		$this->load->database();
-		$data['get_height']=$this->Data_model->get_settings();
- 		$data['get_banner']=$this->Data_model->get_bannerview();
- 		$data['get_message']=$this->Data_model->get_messageview();
- 		$data['get_notice']= $this->Data_model->get_noticeview();
- 		$data['get_playback']= $this->Data_model->get_playbackview();
- 		$data['get_slide']= $this->Data_model->get_slideview();
-		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
-		$data['get_lastid'] = $this->Data_model->getLastidimages();
-		$data['get_lastidv'] = $this->Data_model->getLastidVedio();
- 		$this->load->view('screen/screen_play01', $data);
-	}
-
-	
-
-    
+		$data['get_lastidyoutube'] = $this->Data_model->getLastidyoutube();
+		$data['get_youtube'] =$this->Data_model->get_youtubeview();
+ 		$this->load->view('screen/screen_play05', $data);
+	} 
 
 }
 
