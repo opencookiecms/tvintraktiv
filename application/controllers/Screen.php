@@ -26,6 +26,8 @@ class Screen extends CI_Controller {
 	{
         ///load the data to show on screen/////
 		$this->load->database();
+		$data['get_youtube'] =$this->Data_model->get_youtubeview();
+		$data['get_lastidyoutube'] = $this->Data_model->getLastidyoutube();
 		$data['get_height']=$this->Data_model->get_settings();
  		$data['get_banner']=$this->Data_model->get_bannerview();
  		$data['get_message']=$this->Data_model->get_messageview();

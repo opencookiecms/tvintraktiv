@@ -1,0 +1,94 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr 1fr 2.0fr 1.7fr 0.7fr 0.5fr 1.8fr 0.2fr;
+    grid-template-rows: 0.4fr 0.8fr 2.5fr 1.3fr 2.7fr 0.7fr 1.8fr 0.5fr 0.3fr;
+    grid-template-areas: "left top top top top top top top right" "left Logo Logo Logo Logo noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left banner banner banner banner noticearea noticearea noticearea right" "left messagebot messagebot messagebot messagebot messagebot messagebot clockarea right" "left bottom bottom bottom bottom bottom bottom bottom right";
+
+    background: #00416A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+  }
+  
+  .right { grid-area: right; }
+  
+  .left { grid-area: left; }
+  
+  .top { grid-area: top; }
+  
+  .bottom { grid-area: bottom; }
+  
+  .messagebot { grid-area: messagebot; }
+  
+  .clockarea { grid-area: clockarea; }
+  
+  .noticearea { 
+    grid-area: noticearea;
+    background-color: #4b6584;
+   }
+  
+  .Logo {
+     grid-area: Logo; 
+     background-color: #778ca3;
+    }
+  
+  .videoarea { grid-area: videoarea; }
+  
+  .banner { grid-area: banner; }
+
+  .spantestss
+  {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin-left: 300px;
+    text-align: center;
+    font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
+    -webkit-font-smoothing: antialiased;
+  
+    text-transform: uppercase;
+  
+  }
+
+  .msgbot{
+    background-color:#303952;
+    color: #f5f6fa;
+    font-weight: 900;
+}
+
+
+.thenotis{
+
+  color:#f5f6fa;
+  height: 95%;
+  padding: 5px;
+
+}
+
+.jam{
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
+  text-align: center;
+  height: 66px;
+  padding-top:10px;
+}
+
+.jpstitle{
+  font-weight: bold;
+
+  color: white;
+  font-size: 25px;
+  font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.jpslogo{
+  width: 130px;
+}
