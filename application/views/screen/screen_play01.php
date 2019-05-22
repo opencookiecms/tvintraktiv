@@ -60,7 +60,7 @@
 
   </div>
   <div class="videoarea">
-  <div class="" id="video-placeholder"></div>
+  <div class="" style="width:100%; height:100%" id="video-placeholder"></div>
      <script src="https://www.youtube.com/iframe_api"></script>
   </div>
   <script type='text/javascript'>
@@ -68,12 +68,13 @@ var player;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video-placeholder', {
-        width:'100%',
-        height: '100%',
+        width:'auto',
+        height: 'auto',
         videoId: '<?php echo $get_lastidyoutube[0]->content ?>',
         playerVars: {
             color: 'white',
             autoplay:'1',
+            loop:'1',
             enablejsapi:'1',
             playlist: '<?php foreach ($get_youtube as $row) { ?> <?php echo $row->content.",";?><?php } ?>'
         },
@@ -107,7 +108,17 @@ function initialize(){
 
   <div class="banner">
     <div class="bannerlayourt">
-      <h1>This is banner</h1>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+<div class="carousel-inner crsize">
+    <?php $lastid =  $get_lastbanner[0]->id;?>
+        <?php foreach ($get_banner as $row) {?>
+        <div class="carousel-item <?php if($row->id==$lastid){echo "active";} ?> ">
+            <img class="imgcrs" src="<?php echo site_url("/assets/images/")?><?php echo $row->banner_content?>">
+        </div>
+    <?php } ?>
+</div>
+</div>
     </div>
   </div>
 </div>
