@@ -56,7 +56,7 @@
   </div>
     </div>
   <div class="Logo jpstitle">
-  <img class="jpslogo" src="<?php echo base_url();?>assets/logo/jps.png">  JABATAN PENGAIRAN DAN SALIRAN KUALA MUDA \ SIK \ BALING
+  <img class="jpslogo" src="<?php echo base_url();?>assets/logo/jps.png">  JABATAN PENGAIRAN DAN SALIRAN KUALA MUDA / SIK / BALING
 
   </div>
   <div class="videoarea">
