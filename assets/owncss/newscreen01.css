@@ -1,7 +1,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: 0.2fr 1.8fr 1fr 2.0fr 1.7fr 0.7fr 0.5fr 1.8fr 0.2fr;
-    grid-template-rows: 0.4fr 0.8fr 2.5fr 1.3fr 2.7fr 0.7fr 1.8fr 0.5fr 0.3fr;
+    grid-template-rows: 0.4fr 0.8fr 2.5fr 1.3fr 0.1fr 3.3fr 0.5fr 0.6fr 0.3fr;
     grid-template-areas: "left top top top top top top top right" "left Logo Logo Logo Logo noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left videoarea videoarea videoarea videoarea noticearea noticearea noticearea right" "left banner banner banner banner noticearea noticearea noticearea right" "left messagebot messagebot messagebot messagebot messagebot messagebot clockarea right" "left bottom bottom bottom bottom bottom bottom bottom right";
 
     background: #00416A;  /* fallback for old browsers */
@@ -81,8 +81,8 @@
   font-weight: bold;
 
   color: white;
-  font-size: 25px;
-  font: 30px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
+  font-size: 24px;
+  font: 24px 'body_font','Helvetica Neue',Helvetica,Monospace,sans-serif bold;
   -webkit-font-smoothing: antialiased;
   text-align: center;
   padding-top: 10px;
@@ -90,15 +90,15 @@
 }
 
 .jpslogo{
-  width: 130px;
+  width: 100px;
 }
 
 .imgcrs {
-  height: 158px;
+  height: 74px;
   width:100%;
 }
 
 .crsize {
   width: 100%;
-  height: 158px;
+  height: 74px;
 }

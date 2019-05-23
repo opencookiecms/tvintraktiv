@@ -60,7 +60,7 @@
 
   </div>
   <div class="videoarea">
-  <div class="" style="width:100%; height:100%" id="video-placeholder"></div>
+  <div class="" style="width:100%; height:100%;" id="video-placeholder"></div>
      <script src="https://www.youtube.com/iframe_api"></script>
   </div>
   <script type='text/javascript'>
